@@ -1,0 +1,14 @@
+title: "木更津高専ロボット研究同好会"
+description: "木更津高専ロボット研究同好会 公式HPです"
+baseurl: ""  # GitHub Pagesのサブディレクトリを使用する場合は変更
+url: "https://nitkcrbkn.github.io"  # GitHub PagesのURL
+
+# コレクションやブログ機能の有効化
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Markdownエンジンの指定
+markdown: kramdown
+theme: null  # 既存テーマを無効化（カスタムテーマを適用するため）
