@@ -1,0 +1,31 @@
+---
+layout: default
+title: ホーム
+---
+<p>木更津高専ロボット研究同好会 公式HPです。</p>
+<p>現在HPは改装中です。一部ページは404エラーが表示されることがあります。</p>
+
+<div class="content-box">
+    <h1>私達について</h1>
+    <p>木更津高専ロボット研究同好会は、ロボコン出場に向けた活動を行う木更津高専の同好会です。</p>
+    <p>アイデア対決・全国高等専門学校ロボットコンテストでより良い成績を残すため、日々活動しています。</p>
+    <img src="assets/images/roboken.png" alt="木更津高専ロボット研究同好会 ロゴ" style="max-width: 80%;height: auto;">
+</div>
+<div class="row-flex">
+    <div class="content-box">
+        <h1>記事一覧</h1>
+        {% for post in site. posts %}
+        <li>
+            <a href="{{ post.url | relative_url }}">
+                {{ post.title }}
+            </a>
+            <small>（{{ post.date | date: "%Y-%m-%d" }}）</small>
+        </li>
+        {% endfor %}
+    </div>
+    <div class="content-box">
+        <h1>公式Twitter</h1>
+        {% include twitter_official.html %}
+    </div>
+</div>
+
