@@ -1,0 +1,20 @@
+---
+layout: default
+title: 記事一覧
+---
+<p>2024年以前のロボットについては随時更新予定です。</p>
+{% assign robots_by_year = site.robots | group_by: "year"%}
+{% for year_group in robots_by_year %}
+<h2 class="year-text">{{ year_group.name }}年</h2>
+<div class="robot-intro-field">
+    {% for page in year_group.items %}
+    <a class="robot-intro-card" href="{{ page.url }}">
+        <div>
+            <h3 class="robot-intro-title">{{ page.title }}</h3>
+            <p>{{page.overview}}</p>
+        </div>
+        <img src="{{ page.image }}" alt="{{ project.title }}" class="robot-intro-image">
+    </a>
+    {% endfor %}
+</div>
+{% endfor %}
