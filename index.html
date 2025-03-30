@@ -12,9 +12,9 @@ title: ホーム
     <img src="assets/images/roboken.png" alt="木更津高専ロボット研究同好会 ロゴ" style="max-width: 80%;height: auto;">
 </div>
 <div class="row-flex">
-    <div class="content-box">
-        <h1>記事一覧</h1>
-        {% for post in site. posts %}
+    <div class="content-box blog-box">
+        <h1>最近の記事</h1>
+        {% for post in site.posts | limit: 5 %}
         <li>
             <a href="{{ post.url | relative_url }}">
                 {{ post.title }}
