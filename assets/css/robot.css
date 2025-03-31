@@ -1,4 +1,4 @@
-.robot-intro-card{
+.robot-intro-card {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -12,7 +12,8 @@
     color: #000000;
     flex-wrap: wrap;
 }
-.robot-intro-field{
+
+.robot-intro-field {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -24,15 +25,17 @@
     justify-content: center;
 }
 
-.robot-intro-image{
+.robot-intro-image {
     width: calc(30% + 100px);
     height: auto;
     object-fit: contain;
     align-self: center;
 }
-.year-text{
-    font-size:1.8rem;
+
+.year-text {
+    font-size: 1.8rem;
 }
-.robot-intro-title{
+
+.robot-intro-title {
     font-size: calc(1.3rem + 0.6vw);
 }

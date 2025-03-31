@@ -7,13 +7,14 @@ body {
 }
 
 main {
-    max-width: min(1200px,90%);
+    max-width: min(1200px, 90%);
     margin: 20px auto;
     padding: 20px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 footer {
     background-color: #007bff;
     color: white;
@@ -22,17 +23,20 @@ footer {
     position: relative;
     margin-top: 20px;
 }
+
 .icon {
     margin-right: 10px;
 }
-.row-flex{
+
+.row-flex {
     display: flex;
     width: 100%;
     gap: 10px;
     margin: 0 auto;
     flex-wrap: wrap;
 }
-.content-box{
+
+.content-box {
     flex: 1; /* 均等に配置 */
     min-width: 300px; /* 小さくなりすぎるのを防ぐ */
     background-color: #fff;
@@ -43,10 +47,12 @@ footer {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.text-center{
+
+.text-center {
     display: grid;
     place-items: center;
 }
-.blog-box{
+
+.blog-box {
     min-height: 300px;
 }
