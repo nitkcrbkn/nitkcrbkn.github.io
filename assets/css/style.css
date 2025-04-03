@@ -38,7 +38,7 @@ footer {
 
 .content-box {
     flex: 1; /* 均等に配置 */
-    min-width: 300px; /* 小さくなりすぎるのを防ぐ */
+    width: 66.66%;
     background-color: #fff;
     padding: 20px;
     text-align: center;
@@ -55,4 +55,34 @@ footer {
 
 .blog-box {
     min-height: 300px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 上側のコンテンツを下げる */
+    align-items: center;
+}
+
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.main-contents{
+    width: 66.66%;
+    min-width: 300px;
 }

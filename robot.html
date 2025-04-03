@@ -3,7 +3,7 @@ layout: default
 title: 歴代ロボ
 ---
 <link rel="stylesheet" href="{{ '/assets/css/robot.css' | relative_url }}"/>
-<p>2024年以前のロボットについても将来的には掲載したいと考えています。</p>
+<p>2023年以前のロボットについても将来的には掲載したいと考えています。</p>
 {% assign robots_by_year = site.robots | group_by: "year"%}
 {% for year_group in robots_by_year %}
 <h2 class="year-text">{{ year_group.name }}年</h2>
