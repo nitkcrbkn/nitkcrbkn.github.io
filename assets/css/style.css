@@ -1,0 +1,88 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: min(1200px, 90%);
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.row-flex {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.content-box {
+    flex: 1; /* 均等に配置 */
+    width: 66.66%;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.text-center {
+    display: grid;
+    place-items: center;
+}
+
+.blog-box {
+    min-height: 300px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 上側のコンテンツを下げる */
+    align-items: center;
+}
+
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.main-contents{
+    width: 66.66%;
+    min-width: 300px;
+}

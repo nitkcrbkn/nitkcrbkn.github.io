@@ -8,6 +8,9 @@ collections:
   posts:
     output: true
     permalink: /blog/:title/
+  robots:
+    output: true
+    permalink: /robot/:title/
 
 # Markdownエンジンの指定
 markdown: kramdown
