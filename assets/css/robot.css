@@ -11,6 +11,8 @@
     text-decoration: none;
     color: #000000;
     flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
 }
 
 .robot-intro-field {
@@ -23,15 +25,21 @@
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.robot-intro-text {
+    flex: 1;
+    min-width: 0;
 }
 
 .robot-intro-image {
-    width: calc(30% + 100px);
-    height: auto;
+    height: 100%;
+    max-height: 200px;
+    flex-shrink: 0;
+    max-width: 40%;
     object-fit: contain;
-    align-self: center;
 }
-
 .year-text {
     font-size: 1.8rem;
 }

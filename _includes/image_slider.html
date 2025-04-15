@@ -1,0 +1,84 @@
+<div>
+    <style>
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .slider-wrapper {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.4s ease;
+        }
+
+        .slider img {
+            width: 100%;
+            flex-shrink: 0;
+            border-radius: 10px;
+        }
+
+        .prev-btn,
+        .next-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .prev-btn:hover,
+        .next-btn:hover {
+            background-color: #555;
+        }
+    </style>
+
+    <div class="slider-container">
+        <button class="prev-btn">←</button>
+        <div class="slider-wrapper">
+            <div class="slider">
+                {% for image in include.images %}
+                <img src="{{ image }}" alt="画像{{ forloop.index }}" />
+                {% endfor %}
+            </div>
+        </div>
+        <button class="next-btn">→</button>
+    </div>
+
+    <script>
+        (function() {
+            const container = document.currentScript.closest('div');
+            const slider = container.querySelector('.slider');
+            const images = container.querySelectorAll('img');
+            const prevBtn = container.querySelector('.prev-btn');
+            const nextBtn = container.querySelector('.next-btn');
+
+            let currentIndex = 0;
+
+            function updateSlider() {
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateSlider();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateSlider();
+            });
+        })();
+    </script>
+</div>

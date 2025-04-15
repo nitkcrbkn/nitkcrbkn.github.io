@@ -1,0 +1,15 @@
+---
+layout: post
+---
+{% include image_slider.html images=page.slider_images %}
+
+<h2>概要</h2>
+<ul>
+  <li>高専ロボコン{{ page.year }} 木更津高専 {{page.team}}チーム</li>
+  <li>チーム名：{{ page.title }}</li>
+  {% for result in page.result %}
+  <li>{{ result }}</li>
+  {% endfor %}
+</ul>
+
+{{ content }}
