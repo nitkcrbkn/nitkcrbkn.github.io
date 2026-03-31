@@ -1,0 +1,85 @@
+club:
+  school: 木更津工業高等専門学校
+  name: 木更津高専ロボット研究同好会
+  short_name: 木更津高専ロボット研究同好会
+  description: 機械、制御、アイデア、記録を横断しながら、高専ロボコンに挑む学生チームです。
+
+branding:
+  logo: /assets/images/club-logo.svg
+  logo_alt: 木更津高専ロボット研究同好会 ロゴ
+  logo_note: 現在はプレースホルダです。後から正式ロゴへ差し替えられます。
+  mark_label: RBKN Robotics Club
+
+hero:
+  eyebrow: National Institute of Technology, Kisarazu College
+  title: 設計から発信まで、ロボットづくりをチームで前に進める。
+  body: 木更津高専ロボット研究同好会は、全国高専ロボットコンテストに向けて、発想、設計、加工、制御、記録発信までを一体で行う同好会です。手を動かしながら学び、試作し、改善していく実践の場を育てています。
+  badge: NHK高専ロボコンに挑戦
+  primary_label: 活動紹介を見る
+  primary_url: /about/
+  secondary_label: 記事を読む
+  secondary_url: /blog/
+  notes:
+    - 競技ルールを読み解き、勝ち筋を考える
+    - 機械と制御を往復しながら試作する
+    - 製作ログや記事で知見を次につなげる
+
+stats:
+  - value: 設計 / 加工 / 制御
+    label: 分担しながら横断して学ぶ
+  - value: 試作から実機まで
+    label: アイデアを現場で検証する
+  - value: 記録も自分たちで残す
+    label: 活動を次年度へつなげる
+
+highlights:
+  - title: Hands-on なものづくり
+    description: CAD、加工、配線、プログラムまで、机上で終わらない学びを積み上げます。
+  - title: 競技を読み、設計で詰める
+    description: ルール解釈から戦略、試作、調整までを何度も往復しながら完成度を上げます。
+  - title: 発信まで含めてチーム活動
+    description: 活動記録や大会後のふり返りを記事に残し、外からも中からも見える同好会を目指します。
+
+about:
+  lead: ロボットは、一人の得意分野だけでは完成しません。アイデアを形にする人、構造を詰める人、制御を安定させる人、活動を記録して次につなげる人。それぞれの役割を持ち寄りながら、チームとして完成度を上げていきます。
+  pillars:
+    - title: 発想と戦略
+      description: 競技ルールを読み込み、何を勝ち筋にするかを議論しながら、ロボット全体の方向性を決めます。
+    - title: 設計と試作
+      description: CADや加工を通じて、思いつきを実際に動く形へ落とし込み、成立条件を確かめます。
+    - title: 回路と制御
+      description: センサ、モータ、制御ロジックを組み合わせ、安定して動く挙動へ仕上げていきます。
+    - title: 記録と改善
+      description: 製作メモや記事を残し、翌年以降も活用できる知見として整理します。
+  workflow:
+    - title: 企画
+      description: 競技の目的や制約を整理し、どんな構成が有効かをチームで言語化する段階です。
+    - title: 検証
+      description: 小さな試作と議論を繰り返し、機構や操作性が本当に成立するかを早めに見極めます。
+    - title: 実装
+      description: 分担して実機を組み上げつつ、機械、電装、ソフトを接続しながら全体の完成度を上げます。
+    - title: 調整
+      description: 本番を想定した動作確認と改善を重ね、安定性と再現性を詰めていきます。
+  values:
+    - title: 自分の専門外にも触れる
+      description: 機械系でもソフトの視点を、ソフト系でも現場の構造理解を持てるように活動します。
+    - title: 試して学ぶ
+      description: 完璧な案を待つよりも、まず形にしてみて次の改善点を見つけることを重視します。
+    - title: 残して共有する
+      description: 口頭だけで終わらせず、記事や記録として残すことでチームの資産にします。
+
+contact:
+  intro: 外部からのお問い合わせは、現在 X (旧Twitter) の DM を窓口にしています。
+  methods:
+    - name: X (旧Twitter)
+      value: "@kisarazu_RBKN"
+      url: https://x.com/kisarazu_RBKN
+      note: 顧問管理のアカウントです。返信まで少し時間をいただくことがあります。
+    - name: GitHub
+      value: nitkcrbkn/nitkcrbkn.github.io
+      url: https://github.com/nitkcrbkn/nitkcrbkn.github.io
+      note: サイトの更新履歴や記事データはこちらで管理しています。
+  editorial_note: 記事の更新は GitHub 上の Markdown をもとに行っており、ブラウザだけで扱える Pages CMS にも対応しています。
+
+footer:
+  tagline: 高専ロボコンに向けた活動記録とチーム紹介を掲載しています。

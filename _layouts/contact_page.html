@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<section class="page-hero panel">
+  <p class="eyebrow">Contact</p>
+  <h1>{{ page.title }}</h1>
+  <p class="lede">{{ page.description }}</p>
+</section>
+
+<section class="contact-grid">
+  <article class="panel prose-block">
+    {{ content }}
+  </article>
+  <article class="panel contact-card">
+    <div class="section-heading section-heading--compact">
+      <p class="eyebrow">Contact Method</p>
+      <h2>現在の窓口</h2>
+      <p>{{ site.data.site.contact.intro }}</p>
+    </div>
+    <div class="contact-list">
+      {% for method in site.data.site.contact.methods %}
+        <a class="contact-list__item" href="{{ method.url }}" target="_blank" rel="noreferrer">
+          <span class="contact-list__label">{{ method.name }}</span>
+          <strong>{{ method.value }}</strong>
+          <span>{{ method.note }}</span>
+        </a>
+      {% endfor %}
+    </div>
+    <p class="editorial-note">{{ site.data.site.contact.editorial_note }}</p>
+  </article>
+</section>

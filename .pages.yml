@@ -1,0 +1,132 @@
+media: assets/images/uploads
+
+content:
+  - name: posts
+    label: 記事
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date, summary]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: タイトル
+        type: string
+        required: true
+      - name: date
+        label: 公開日
+        type: date
+        required: true
+      - name: summary
+        label: 一言説明
+        type: text
+      - name: published
+        label: 公開する
+        type: boolean
+        default: true
+      - name: body
+        label: 本文
+        type: rich-text
+
+  - name: robots
+    label: ロボ紹介
+    type: collection
+    path: _robots
+    format: yaml-frontmatter
+    filename: "{year}-{primary}.md"
+    view:
+      fields: [title, year, status]
+      primary: title
+      sort: [year, title]
+      default:
+        sort: year
+        order: desc
+    fields:
+      - name: title
+        label: 機体名
+        type: string
+        required: true
+      - name: year
+        label: 年度
+        type: number
+        required: true
+      - name: status
+        label: ステータス
+        type: string
+      - name: overview
+        label: 概要
+        type: text
+      - name: image
+        label: 画像
+        type: image
+      - name: published
+        label: 公開する
+        type: boolean
+        default: true
+      - name: body
+        label: 詳細
+        type: rich-text
+
+  - name: about
+    label: 活動紹介ページ
+    type: file
+    path: about.md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: タイトル
+        type: string
+        required: true
+      - name: description
+        label: 説明
+        type: text
+      - name: body
+        label: 本文
+        type: rich-text
+
+  - name: contact
+    label: お問い合わせページ
+    type: file
+    path: contact.md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: タイトル
+        type: string
+        required: true
+      - name: description
+        label: 説明
+        type: text
+      - name: body
+        label: 本文
+        type: rich-text
+
+  - name: site_settings
+    label: サイト設定
+    type: file
+    path: _data/site.yml
+    format: yaml
+    fields:
+      - name: branding
+        label: ロゴ設定
+        type: object
+        fields:
+          - name: logo
+            label: ロゴ画像
+            type: image
+          - name: logo_alt
+            label: ロゴの代替テキスト
+            type: string
+          - name: logo_note
+            label: ロゴ横の注記
+            type: text
+
+settings:
+  content:
+    merge: true

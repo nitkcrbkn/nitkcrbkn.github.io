@@ -1,0 +1,18 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="footer-brand">
+      <span class="footer-brand__logo-wrap">
+        {% include site_logo.html class="footer-brand__logo" %}
+      </span>
+      <div>
+        <p class="site-footer__title">{{ site.title }}</p>
+        <p class="site-footer__copy">&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+      </div>
+    </div>
+    <div class="site-footer__links">
+      {% for item in site.data.navigation %}
+        <a href="{{ item.url | relative_url }}">{{ item.label }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</footer>
