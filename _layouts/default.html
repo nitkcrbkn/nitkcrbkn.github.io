@@ -17,6 +17,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      var storedTheme = localStorage.getItem("theme");
+      var preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      var theme = storedTheme === "dark" || storedTheme === "light" ? storedTheme : preferredTheme;
+      document.documentElement.dataset.theme = theme;
+    }());
+  </script>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body class="{{ page.body_class }}">
@@ -27,6 +35,14 @@
     </main>
     {% include site_footer.html %}
   </div>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" type="button" aria-label="ページの先頭に戻る" data-back-to-top>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
   <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
 </body>
 </html>

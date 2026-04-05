@@ -30,6 +30,10 @@
         {% endif %}
         <a class="site-nav__link{% if active %} is-active{% endif %}" href="{{ item.url | relative_url }}">{{ item.label }}</a>
       {% endfor %}
+      <button class="theme-toggle" type="button" aria-label="ダークモード" aria-pressed="false" data-theme-toggle>
+        <span class="theme-toggle__icon" aria-hidden="true"></span>
+        <span class="sr-only" data-theme-toggle-label>ダークモード</span>
+      </button>
     </nav>
   </div>
 </header>

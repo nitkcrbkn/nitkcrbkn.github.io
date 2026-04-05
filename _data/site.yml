@@ -1,85 +1,255 @@
 club:
   school: 木更津工業高等専門学校
   name: 木更津高専ロボット研究同好会
-  short_name: 木更津高専ロボット研究同好会
-  description: 機械、制御、アイデア、記録を横断しながら、高専ロボコンに挑む学生チームです。
+  short_name: ロボット研究同好会
+  description: NHK高専ロボコンを中心に、機械班と制御班が連携しながらロボットを設計・製作し、地域展示や技術発信にも取り組む学生同好会です。
 
 branding:
-  logo: /assets/images/club-logo.svg
+  logo_black: /assets/images/club-logo-black.svg
+  logo_white: /assets/images/club-logo-white.svg
   logo_alt: 木更津高専ロボット研究同好会 ロゴ
-  logo_note: 現在はプレースホルダです。後から正式ロゴへ差し替えられます。
   mark_label: RBKN Robotics Club
 
 hero:
   eyebrow: National Institute of Technology, Kisarazu College
-  title: 設計から発信まで、ロボットづくりをチームで前に進める。
-  body: 木更津高専ロボット研究同好会は、全国高専ロボットコンテストに向けて、発想、設計、加工、制御、記録発信までを一体で行う同好会です。手を動かしながら学び、試作し、改善していく実践の場を育てています。
+  title: アイデアを機構へ、機構を走るロボットへ。
+  body: 木更津高専ロボット研究同好会は、高専ロボコンに向けて、機構、制御、デザイン、発信までを学生主体で積み上げるチームです。日々の製作、歴代ロボット、活動記録を通して、ロボ研のものづくりを紹介しています。
   badge: NHK高専ロボコンに挑戦
   primary_label: 活動紹介を見る
   primary_url: /about/
-  secondary_label: 記事を読む
-  secondary_url: /blog/
+  secondary_label: 歴代ロボを見る
+  secondary_url: /robot/
   notes:
-    - 競技ルールを読み解き、勝ち筋を考える
-    - 機械と制御を往復しながら試作する
-    - 製作ログや記事で知見を次につなげる
+    - 機械班と制御班が並走して一台を仕上げる
+    - Aチーム・Bチームで異なるアイデアを育てる
+    - 展示や技術アーカイブで活動を外へひらく
 
 stats:
-  - value: 設計 / 加工 / 制御
-    label: 分担しながら横断して学ぶ
-  - value: 試作から実機まで
-    label: アイデアを現場で検証する
-  - value: 記録も自分たちで残す
-    label: 活動を次年度へつなげる
+  - value: "2013"
+    label: 「カブ跳ムシ」技術賞
+  - value: "2016"
+    label: 「伊能運搬隊」アイデア倒れ賞
+  - value: "2024"
+    label: 8年ぶり全国大会 / デザイン賞
+  - value: "2025"
+    label: 2年連続全国大会 / 安川電機特別賞
 
 highlights:
-  - title: Hands-on なものづくり
-    description: CAD、加工、配線、プログラムまで、机上で終わらない学びを積み上げます。
-  - title: 競技を読み、設計で詰める
-    description: ルール解釈から戦略、試作、調整までを何度も往復しながら完成度を上げます。
-  - title: 発信まで含めてチーム活動
-    description: 活動記録や大会後のふり返りを記事に残し、外からも中からも見える同好会を目指します。
+  - title: 機械と制御の協働
+    description: 機構設計、加工、配線、プログラムを行き来しながら、実機の完成度を上げていきます。
+  - title: Aチーム・Bチーム制
+    description: 同じ競技課題に対して別案を育てることで、機構も世界観も異なるロボットが並行して生まれます。
+  - title: 技術を残す文化
+    description: GitHub Pages や Doxygen で制御系ドキュメントを公開し、次年度へ知見をつないでいます。
+  - title: 地域に開くものづくり
+    description: 展示・操縦体験、学校広報、外部取材を通して、ロボットづくりの面白さを学外にも届けています。
 
 about:
-  lead: ロボットは、一人の得意分野だけでは完成しません。アイデアを形にする人、構造を詰める人、制御を安定させる人、活動を記録して次につなげる人。それぞれの役割を持ち寄りながら、チームとして完成度を上げていきます。
-  pillars:
-    - title: 発想と戦略
-      description: 競技ルールを読み込み、何を勝ち筋にするかを議論しながら、ロボット全体の方向性を決めます。
-    - title: 設計と試作
-      description: CADや加工を通じて、思いつきを実際に動く形へ落とし込み、成立条件を確かめます。
-    - title: 回路と制御
-      description: センサ、モータ、制御ロジックを組み合わせ、安定して動く挙動へ仕上げていきます。
-    - title: 記録と改善
-      description: 製作メモや記事を残し、翌年以降も活用できる知見として整理します。
+  lead: ロボットは、一人の得意分野だけでは完成しません。機械、制御、運営、記録の力を持ち寄りながら、毎年の競技課題に向き合っています。
   workflow:
-    - title: 企画
-      description: 競技の目的や制約を整理し、どんな構成が有効かをチームで言語化する段階です。
-    - title: 検証
-      description: 小さな試作と議論を繰り返し、機構や操作性が本当に成立するかを早めに見極めます。
-    - title: 実装
-      description: 分担して実機を組み上げつつ、機械、電装、ソフトを接続しながら全体の完成度を上げます。
-    - title: 調整
-      description: 本番を想定した動作確認と改善を重ね、安定性と再現性を詰めていきます。
+    - title: ルール読解と発想
+      description: 年度テーマを読み解き、どの動きで勝負するか、どんな見せ場をつくるかをチームで議論します。
+    - title: 試作と分担
+      description: Aチーム・Bチームの中で機械班と制御班が役割を持ち、試作を重ねながら構想を実機へ落とし込みます。
+    - title: 統合と調整
+      description: 機械、回路、ソフトをつなぎ込み、本番を想定したテストで再現性と操作性を詰めていきます。
+    - title: 本番と継承
+      description: 大会、展示、取材、アーカイブ公開まで含めて活動を次の年度につなげます。
   values:
-    - title: 自分の専門外にも触れる
-      description: 機械系でもソフトの視点を、ソフト系でも現場の構造理解を持てるように活動します。
-    - title: 試して学ぶ
-      description: 完璧な案を待つよりも、まず形にしてみて次の改善点を見つけることを重視します。
-    - title: 残して共有する
-      description: 口頭だけで終わらせず、記事や記録として残すことでチームの資産にします。
+    - title: まず動かして確かめる
+      description: アイデアを早めに形にして、実際に動かしながら改善点を見つけます。
+    - title: 専門を越えて協力する
+      description: 機械、制御、運営、記録の境目を越え、全体を見ながら一台を仕上げます。
+    - title: 見せ方にもこだわる
+      description: 点数だけでなく、テーマ性やデザイン、会場を沸かせる動きもロボコンの魅力として大切にします。
+    - title: 活動を外へ開く
+      description: 展示や体験会、学校広報、オンライン発信を通して、ロボットづくりの楽しさを共有します。
+
+organization:
+  intro: 年度ごとに細部は変わりますが、ロボ研は専門分担とチーム戦を組み合わせた体制で動いています。
+  groups:
+    - title: 機械班
+      description: フレーム、駆動、リンク機構、加工、組み立てを担い、アイデアを実際に動く形へ落とし込みます。
+    - title: 制御班
+      description: 回路、配線、センサ、プログラム、通信系を担当し、安定して再現できる挙動をつくります。
+    - title: Aチーム / Bチーム
+      description: 同じ競技課題に対して別案を育てることで、機構も世界観も異なるロボットが並行して生まれます。
+    - title: マネージャー / 記録
+      description: 進行管理、作業場所の調整、情報共有、発信まで含めて、開発全体を前に進める役割です。
+  operations:
+    - title: コードと情報の共有
+      description: 制御系の開発ではクラウドを活用して情報を共有し、チーム全員が状態を追える環境づくりを大切にしています。
+    - title: ヒューマンエラーの予防
+      description: バッテリーや空気弁の確認など、本番前に抜け漏れが出やすい箇所には張り紙や手順確認で備えます。
+    - title: 部品調達と検討
+      description: Web の eカタログだけでなく紙カタログも併用し、予算と納期を見ながら必要な部品を選定します。
+    - title: 顧問・OBとの連携
+      description: 顧問教員の支援や OB お披露目会での技術交流を通して、学年を越えた知見の継承を進めています。
+
+technical:
+  intro: 競技用ロボットの背後には、実機を安定して動かすための組込み制御と検証の積み重ねがあります。公開している技術アーカイブから、ロボ研のものづくりの一端を見ることができます。
+  items:
+    - title: STM32ベースの制御基盤
+      description: 公開 Doxygen では、STM32 マイコン向けのロボット制御システムとしてレイヤ分離された構成が紹介されています。
+    - title: ロギング / CAN / デバッグ
+      description: ログ出力、CAN 通信、デバッグストリームなど、本番機の確認と調整を支える機能が文書化されています。
+    - title: テストと継続的な整備
+      description: Catch2 を使ったユニットテストや CI/CD 生成物の公開から、制御ソフトを継続的に磨く姿勢がうかがえます。
+  links:
+    - label: GitHub Pages
+      title: CI/CD レポート
+      description: 自動生成されたカバレッジやドキュメントの公開先です。
+      url: https://github.com/nitkcrbkn/pages
+      url_label: GitHub を見る
+    - label: Doxygen
+      title: STM32System ドキュメント
+      description: 制御システムの概要、モジュール、通信まわりの説明を読むことができます。
+      url: https://nitkcrbkn.github.io/pages/develop/doxygen/index.html
+      url_label: ドキュメントを開く
+
+achievements_intro: 大会結果だけでなく、アイデアやデザイン、技術の積み重ねが評価されてきた歩みがあります。
+achievements:
+  - year: "2013"
+    title: カブ跳ムシが技術賞
+    description: 関東甲信越地区大会で技術賞を受賞。現在まで動く展示機として地域イベントにも登場しています。
+  - year: "2016"
+    title: 伊能運搬隊が全国大会でアイデア倒れ賞
+    description: 伊能忠敬をモチーフにした大胆な世界観と約5mロッドの機構で、木更津らしい発想力を印象づけました。
+  - year: "2024"
+    title: きさぺん越冬隊がデザイン賞
+    description: 8年ぶりに全国大会へ進出し、ペンギンをモチーフにした機体で全国大会デザイン賞を受賞しました。
+  - year: "2025"
+    title: それゆけキサンタクロースが2年連続全国大会へ
+    description: Aチームが地区最高得点で全国大会出場を決め、Bチームのオクト pass gate も安川電機特別賞を受賞しました。
+
+history_intro: 旧サイトに残る記録から最近の学校公式記事まで、ロボ研の歩みは少しずつつながっています。
+history:
+  - year: "2010"
+    title: 旧サイトに活動準備の記録
+    description: 旧公式サイトには、高専ロボコン2010へ向けて準備を進める様子が残っており、現在につながる活動の出発点のひとつになっています。
+  - year: "2013"
+    title: 周年だぬき / カブ跳ムシの記録
+    description: 旧公式サイトやギャラリーに当時の製作ロボットが残り、2013年シーズンの挑戦をたどることができます。
+  - year: "2016"
+    title: 伊能運搬隊で全国大会へ
+    description: 千葉ゆかりの伊能忠敬をテーマに据え、見た目の楽しさと大胆な機構を両立したロボットで全国大会に出場しました。
+  - year: "2024"
+    title: きさぺん越冬隊で全国舞台へ帰還
+    description: 木更津高専が関東甲信越地区大会の主管校を務めた年、Aチームが全国大会出場とデザイン賞をつかみました。
+  - year: "2025"
+    title: 2年連続全国大会出場
+    description: Aチーム「それゆけキサンタクロース」が地区最高得点を記録し、Bチーム「オクト pass gate」も特別賞を受賞しました。
+  - year: "2026"
+    title: 学校だよりで2025シーズンを総括
+    description: 地区大会から全国大会までの流れや改良の歩みが学校広報に掲載され、ロボ研の挑戦が次の世代へ共有されています。
+
+support:
+  note: ロボ研の活動は、技術提供や設備面の後押し、地域からの応援に支えられています。日頃よりお力添えをいただいている皆さまを紹介します。
+  companies:
+    - name: STマイクロエレクトロニクス
+      category: Technical Support
+      description: 2025年7月、STM32マイコンをご提供いただきました。制御系の試作、ファームウェア開発、周辺機能の検証を進めるための基盤として活用しています。
+      url: https://x.com/kisarazu_RBKN/status/1943513142883160210
+      url_label: X の投稿を見る
+    - name: GOP
+      category: Equipment Support
+      description: 作業台や台車など、製作現場を支える設備面でお力添えをいただいています。機体製作や整備を進めやすい環境づくりの支えになっています。
+      url: https://www.gop.co.jp/products/
+      url_label: 製品情報を見る
+    - name: 東京湾横断道路株式会社
+      category: Local Support
+      description: 木更津に根ざした企業として、ロボ研の挑戦を応援していただいています。地域に支えられながら活動を続けるうえで、心強い存在です。
+      url: https://www.aqua-line.co.jp/
+      url_label: 企業サイトを見る
+    - name: 三協リール
+      category: Equipment Support
+      description: エア・コードリールや周辺機器を通して、配線や作業環境まわりを支えていただいています。日々の整備や準備を安定して進める力になっています。
+      url: https://www.triens.jp/
+      url_label: 企業サイトを見る
+  partners:
+    - name: STマイクロエレクトロニクス
+      description: STM32マイコンのご提供を通して、制御開発の基盤づくりを支えていただいています。
+    - name: GOP
+      description: 製作現場の安全性と作業性を支える設備面でお力添えをいただいています。
+    - name: 東京湾横断道路株式会社
+      description: 木更津の地域企業として、ロボ研の挑戦を応援していただいています。
+    - name: 三協リール
+      description: 製作環境や配線まわりを支える設備面でお力添えをいただいています。
+
+outreach_intro: 競技用ロボットは大会だけで終わらず、地域や学校の外にも持ち出され、次の出会いを生んでいます。
+outreach:
+  - year: "2024"
+    label: Workshop
+    title: イオンモール木更津で展示・操縦体験
+    description: 過去の高専ロボコン出場機を展示し、子どもたちが実際にロボットを動かせる体験イベントを実施しました。
+  - year: "2024"
+    label: Visit
+    title: 木更津市長を表敬訪問
+    description: 地区大会の開催や全国大会出場の報告を行い、地域からの応援に感謝を伝えました。
+  - year: "2025"
+    label: Workshop
+    title: 展示・操縦体験 第2弾
+    description: イオンモール木更津での第2弾には小中学生39名が参加し、3台のロボットが体験機として活躍しました。
+  - year: "2025"
+    label: OB Event
+    title: OBお披露目会を開催
+    description: Aチーム・Bチームの機体を卒業生へ披露し、全国大会へ向けた改良のヒントや交流の時間につなげました。
+
+media_intro: 日々の発信から過去アーカイブまで、いくつもの窓口にロボ研の記録が残っています。
+media:
+  - label: X
+    title: 公式X
+    description: 新歓、展示、ロボコン関連のお知らせなど、いちばん機動的な情報発信の場です。
+    url: https://x.com/kisarazu_RBKN
+    url_label: X を見る
+  - label: YouTube
+    title: 活動場所案内と動画アーカイブ
+    description: 活動場所への行き方動画やチーム関連動画が公開されています。
+    url: https://www.youtube.com/channel/UCXd_QHewbV86jjEoDyFc0Gw
+    url_label: チャンネルを見る
+  - label: Web Archive
+    title: FC2公式サイト / 旧サイト / ブログ
+    description: 2010年代の活動記録や当時のロボット名をたどれる、ロボ研の長い歴史を支えるアーカイブです。
+    url: https://knctrbkn.web.fc2.com/
+    url_label: FC2 サイトを見る
+  - label: School News
+    title: 木更津高専公式ニュース
+    description: 大会結果、表敬訪問、OBお披露目会、放送案内など、近年の活動を追いやすい公式窓口です。
+    url: https://www.kisarazu.ac.jp/robokon2024/
+    url_label: 関連ページを見る
+  - label: Tech
+    title: GitHub Pages / Doxygen
+    description: 制御ドキュメントや CI/CD レポートが公開されており、競技の裏側にある技術基盤にも触れられます。
+    url: https://nitkcrbkn.github.io/pages/develop/doxygen/index.html
+    url_label: 技術アーカイブを見る
+  - label: Media
+    title: 学校広報・新聞掲載
+    description: 学生取材記事や学校だより、日本経済新聞の連載などを通して、活動が学外にも紹介されています。
+    url: https://www.kisarazu.ac.jp/news/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E7%A0%94%E7%A9%B6%E5%90%8C%E5%A5%BD%E4%BC%9A%E3%81%AE%E6%B4%BB%E5%8B%95%E3%81%AE%E6%A7%98%E5%AD%90%E3%81%8C%E6%97%A5%E6%9C%AC%E7%B5%8C%E6%B8%88%E6%96%B0%E8%81%9E/
+    url_label: 記事を見る
+
+robot_archive_intro: 旧サイトに残る初期の記録から、全国大会に挑んだ近年の機体まで、ロボ研の歩みを年度ごとにたどれます。
 
 contact:
-  intro: 外部からのお問い合わせは、現在 X (旧Twitter) の DM を窓口にしています。
+  intro: 外部からのお問い合わせは X (旧Twitter) の DM が最も確実です。あわせて、旧公式サイトに掲載されていたメールアドレスや公開アーカイブも案内しています。
   methods:
     - name: X (旧Twitter)
       value: "@kisarazu_RBKN"
       url: https://x.com/kisarazu_RBKN
-      note: 顧問管理のアカウントです。返信まで少し時間をいただくことがあります。
+      note: 新歓や展示、見学相談などはこちらがもっとも早くつながります。
+    - name: Email
+      value: knctrbknpr@gmail.com
+      url: mailto:knctrbknpr@gmail.com
+      note: 旧公式サイトにも掲載されている連絡先です。返信に時間がかかる場合があります。
+    - name: YouTube
+      value: 木更津高専ロボット研究同好会
+      url: https://www.youtube.com/channel/UCXd_QHewbV86jjEoDyFc0Gw
+      note: 活動場所案内や動画アーカイブを公開しています。
     - name: GitHub
-      value: nitkcrbkn/nitkcrbkn.github.io
-      url: https://github.com/nitkcrbkn/nitkcrbkn.github.io
-      note: サイトの更新履歴や記事データはこちらで管理しています。
-  editorial_note: 記事の更新は GitHub 上の Markdown をもとに行っており、ブラウザだけで扱える Pages CMS にも対応しています。
+      value: nitkcrbkn
+      url: https://github.com/nitkcrbkn
+      note: 技術ドキュメントや公開レポートの導線があります。
+  editorial_note: 速報性の高い情報は X、活動の蓄積はこのサイトや各種アーカイブへ、という形で発信の場を使い分けています。
 
 footer:
-  tagline: 高専ロボコンに向けた活動記録とチーム紹介を掲載しています。
+  tagline: 高専ロボコンを中心に、競技ロボット、地域展示、技術アーカイブまでをつないで紹介しています。

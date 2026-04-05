@@ -8,14 +8,14 @@ body_class: archive-page
 
 <section class="page-hero panel">
   <h1>歴代ロボ</h1>
-  <p class="lede">2023年以前のロボットについても将来的には掲載したいと考えています。</p>
+  <p class="lede">{{ site.data.site.robot_archive_intro }}</p>
 </section>
 
 <section class="robot-year-list">
   {% for year_group in robots_by_year %}
-    <section class="panel robot-year-section">
+    <section class="panel robot-year-section reveal">
       <h2>{{ year_group.name }}年</h2>
-      <div class="robot-card-grid">
+      <div class="robot-card-grid reveal-stagger">
         {% for robot in year_group.items %}
           <a class="robot-card" href="{{ robot.url | relative_url }}">
             <div class="robot-card__copy">
@@ -24,14 +24,14 @@ body_class: archive-page
             </div>
             {% assign thumb = robot.image | default: '/assets/images/roboken.png' %}
             <div class="robot-card__image">
-              <img src="{{ thumb | relative_url }}" alt="{{ robot.title }}">
+              <img src="{{ thumb | relative_url }}" alt="{{ robot.title }}" loading="lazy">
             </div>
           </a>
         {% endfor %}
       </div>
     </section>
   {% else %}
-    <section class="panel empty-panel">
+    <section class="panel empty-panel reveal">
       <h2>ロボ情報はまだありません</h2>
     </section>
   {% endfor %}

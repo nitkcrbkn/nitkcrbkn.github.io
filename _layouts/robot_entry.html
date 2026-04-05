@@ -10,6 +10,12 @@ layout: default
         {% if page.year %}
           <span>{{ page.year }}</span>
         {% endif %}
+        {% if page.team %}
+          <span>{{ page.team }}</span>
+        {% endif %}
+        {% if page.award %}
+          <span>{{ page.award }}</span>
+        {% endif %}
       </div>
       {% if page.overview %}
         <p class="lede">{{ page.overview }}</p>
