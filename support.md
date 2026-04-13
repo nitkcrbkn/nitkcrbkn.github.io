@@ -7,10 +7,9 @@ kicker: Support & Sponsors
 ---
 高専ロボコンに向けたロボット製作は、学生だけで完結するものではありません。技術提供や設備面の後押し、地域からの応援に支えられながら、ロボ研の活動は続いています。このページでは、日頃よりお力添えをいただいている皆さまを紹介します。
 
-## 支援・連携
-<div class="archive-grid">
+<div class="archive-grid archive-grid--support">
   {% for item in site.data.site.support.companies %}
-    <article class="content-card">
+    <article class="content-card content-card--support">
       <div class="content-card__meta">
         <span>{{ item.category }}</span>
       </div>

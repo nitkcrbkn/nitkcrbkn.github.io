@@ -4,73 +4,42 @@ title: ホーム
 description: 木更津高専ロボット研究同好会の公式サイトです。
 body_class: home-page
 ---
-{% assign robots_sorted = site.robots | sort: "year" | reverse %}
-
-<section class="hero panel hero-panel">
-  <div class="hero-particles" aria-hidden="true">
-    <span class="hero-particles__dot"></span>
-    <span class="hero-particles__dot"></span>
-    <span class="hero-particles__dot"></span>
-    <span class="hero-particles__dot"></span>
-    <span class="hero-particles__dot"></span>
-    <span class="hero-particles__dot"></span>
-    <span class="hero-particles__shape"></span>
-    <span class="hero-particles__shape"></span>
-    <span class="hero-particles__shape"></span>
-    <span class="hero-particles__shape"></span>
-  </div>
-  <div class="hero-panel__copy">
-    <p class="eyebrow">{{ site.data.site.hero.eyebrow }}</p>
-    <h1>{{ site.data.site.hero.title }}</h1>
-    <p class="lede">{{ site.data.site.hero.body }}</p>
-    <div class="button-row">
-      <a class="button button--primary" href="{{ site.data.site.hero.primary_url | relative_url }}">{{
-        site.data.site.hero.primary_label }}</a>
-      <a class="button button--ghost" href="{{ site.data.site.hero.secondary_url | relative_url }}">{{
-        site.data.site.hero.secondary_label }}</a>
-    </div>
-  </div>
-  <div class="hero-panel__aside">
-    <div class="hero-brand-stage">
-      <div class="hero-brand-stage__head">
-        <p class="chip chip--accent">{{ site.data.site.hero.badge }}</p>
-        <span class="hero-brand-stage__label">{{ site.data.site.branding.mark_label }}</span>
-      </div>
-      <div class="hero-brand-stage__frame">
-        {% include site_logo.html class="hero-brand-stage__logo" %}
-      </div>
-      <ul class="note-list">
-        {% for note in site.data.site.hero.notes %}
-        <li>{{ note }}</li>
-        {% endfor %}
-      </ul>
-    </div>
+<section class="page-hero panel">
+  <p class="eyebrow">Home</p>
+  <h1>{{ site.data.site.club.name }}</h1>
+  <p class="lede">{{ site.data.site.club.description }}</p>
+  <div class="button-row">
+    <a class="button button--primary" href="{{ '/robot/' | relative_url }}">歴代ロボを見る</a>
+    <a class="button button--ghost" href="{{ '/blog/' | relative_url }}">記事一覧を見る</a>
   </div>
 </section>
 
-<section class="panel intro-panel reveal">
-  <div class="section-heading section-heading--compact">
-    <p class="eyebrow">About</p>
-    <h2>私達について</h2>
-  </div>
-  <div class="intro-panel__body">
-    <div class="prose-block">
-      <p>{{ site.data.site.club.description }}</p>
-    </div>
-    <div class="intro-panel__visual">
-      <img src="{{ '/assets/images/roboken.png' | relative_url }}" alt="木更津高専ロボット研究同好会 ロゴ" loading="lazy">
-    </div>
-  </div>
-</section>
+{% assign stats_sorted = site.data.site.stats | sort: "value" %}
 
-<section class="split-layout">
-  <article class="panel reveal">
+<section class="split-layout home-summary">
+  <article class="panel reveal home-summary__panel">
+    <div class="section-heading section-heading--compact">
+      <p class="eyebrow">Highlights</p>
+      <h2>主な実績</h2>
+    </div>
+    <div class="stack-list reveal-stagger">
+      {% for item in stats_sorted %}
+      <article class="content-card">
+        <div class="content-card__meta">
+          <span>{{ item.value }}</span>
+        </div>
+        <h3>{{ item.label }}</h3>
+      </article>
+      {% endfor %}
+    </div>
+  </article>
+  <article class="panel reveal home-summary__panel">
     <div class="section-heading section-heading--compact">
       <p class="eyebrow">Blog</p>
       <h2>最近の記事</h2>
     </div>
     <div class="stack-list">
-      {% for post in site.posts limit: 3 %}
+      {% for post in site.posts limit: 2 %}
       <article class="content-card">
         <div class="content-card__meta">
           <span>{{ post.date | date: "%Y.%m.%d" }}</span>
@@ -83,15 +52,5 @@ body_class: home-page
       {% endfor %}
     </div>
     <a class="text-link" href="{{ '/blog/' | relative_url }}">記事一覧を見る</a>
-  </article>
-
-  <article class="panel reveal">
-    <div class="section-heading section-heading--compact">
-      <p class="eyebrow">X</p>
-      <h2>公式X</h2>
-    </div>
-    <div class="twitter-panel">
-      {% include twitter_official.html %}
-    </div>
   </article>
 </section>

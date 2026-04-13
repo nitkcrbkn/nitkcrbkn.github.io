@@ -1,9 +1,6 @@
 - label: ホーム
   url: /
   match: /
-- label: 活動紹介
-  url: /about/
-  match: /about/
 - label: ロボ紹介
   url: /robot/
   match: /robot/

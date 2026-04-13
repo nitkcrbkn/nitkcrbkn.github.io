@@ -81,6 +81,5 @@ published: true
 - ナビゲーション: `_data/navigation.yml`
 - 記事: `_posts/`
 - ロボ紹介: `_robots/`
-- 活動紹介ページ本文: `about.md`
 - お問い合わせページ本文: `contact.md`
 - ロゴ画像: `assets/images/club-logo.svg`
