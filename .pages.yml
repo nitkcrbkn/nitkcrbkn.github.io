@@ -73,23 +73,6 @@ content:
         label: 詳細
         type: rich-text
 
-  - name: about
-    label: 活動紹介ページ
-    type: file
-    path: about.md
-    format: yaml-frontmatter
-    fields:
-      - name: title
-        label: タイトル
-        type: string
-        required: true
-      - name: description
-        label: 説明
-        type: text
-      - name: body
-        label: 本文
-        type: rich-text
-
   - name: contact
     label: お問い合わせページ
     type: file

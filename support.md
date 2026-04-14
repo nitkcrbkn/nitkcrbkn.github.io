@@ -15,7 +15,7 @@ kicker: Support & Sponsors
       </div>
       <h3>{{ item.name }}</h3>
       <p>{{ item.description }}</p>
-      <a class="text-link" href="{{ item.url }}" target="_blank" rel="noreferrer">{{ item.url_label }}</a>
+      <a class="text-link" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.url_label }}</a>
     </article>
   {% endfor %}
 </div>
