@@ -4,10 +4,26 @@ document.addEventListener("DOMContentLoaded", function () {
      --------------------------------------------------------------- */
   var toggle = document.querySelector("[data-menu-toggle]");
   var nav = document.querySelector("[data-nav]");
+  var menuToggleLabel = document.querySelector("[data-menu-toggle-label]");
   var themeToggle = document.querySelector("[data-theme-toggle]");
   var themeToggleLabel = document.querySelector("[data-theme-toggle-label]");
   var root = document.documentElement;
   var darkModeMedia = window.matchMedia("(prefers-color-scheme: dark)");
+
+  function applyMenuToggleState(isOpen) {
+    if (!toggle) {
+      return;
+    }
+
+    var nextLabel = isOpen ? "メニューを閉じる" : "メニューを開く";
+
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    toggle.setAttribute("aria-label", nextLabel);
+
+    if (menuToggleLabel) {
+      menuToggleLabel.textContent = nextLabel;
+    }
+  }
 
   function applyTheme(theme, persist) {
     var nextTheme = theme === "dark" ? "dark" : "light";
@@ -49,15 +65,17 @@ document.addEventListener("DOMContentLoaded", function () {
      MOBILE NAV TOGGLE
      --------------------------------------------------------------- */
   if (toggle && nav) {
+    applyMenuToggleState(document.body.classList.contains("nav-open"));
+
     toggle.addEventListener("click", function () {
       var isOpen = document.body.classList.toggle("nav-open");
-      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      applyMenuToggleState(isOpen);
     });
 
     nav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         document.body.classList.remove("nav-open");
-        toggle.setAttribute("aria-expanded", "false");
+        applyMenuToggleState(false);
       });
     });
   }
