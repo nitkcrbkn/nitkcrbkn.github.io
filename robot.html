@@ -2,6 +2,7 @@
 layout: default
 title: 歴代ロボ
 body_class: archive-page
+permalink: /robot/
 ---
 {% assign robots_sorted = site.robots | sort: "year" | reverse %}
 {% assign robots_by_year = robots_sorted | group_by: "year" %}

@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, { passive: true });
 
     backToTop.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
     });
   }
 
