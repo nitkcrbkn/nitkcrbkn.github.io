@@ -6,7 +6,7 @@ body_class: basic-page
 kicker: Support & Sponsors
 permalink: /support/
 ---
-高専ロボコンに向けたロボット製作は、学生だけで完結するものではありません。技術提供や設備面の後押し、地域からの応援に支えられながら、ロボ研の活動は続いています。このページでは、日頃よりお力添えをいただいている皆さまを紹介します。
+{{ site.data.site.support.note }}
 
 <div class="archive-grid archive-grid--support">
   {% for item in site.data.site.support.companies %}

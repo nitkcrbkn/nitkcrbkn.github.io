@@ -24,7 +24,7 @@
         {% endif %}
       {% endfor %}
     </div>
-    <nav class="site-footer__nav">
+    <nav class="site-footer__nav" aria-label="フッターナビゲーション">
       <div class="site-footer__links">
         {% for item in site.data.navigation %}
           <a href="{{ item.url | relative_url }}">{{ item.label }}</a>

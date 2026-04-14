@@ -21,8 +21,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
   <script>
     (function () {
-      var storedTheme = localStorage.getItem("theme");
       var preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      var storedTheme = null;
+
+      try {
+        storedTheme = localStorage.getItem("theme");
+      } catch (error) {
+        storedTheme = null;
+      }
+
       var theme = storedTheme === "dark" || storedTheme === "light" ? storedTheme : preferredTheme;
       document.documentElement.dataset.theme = theme;
     }());

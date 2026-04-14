@@ -45,7 +45,7 @@ Jekyll で構成した GitHub Pages 向けのサイトです。公開、ロー�
 
 Markdown や Git を知らなくても、ブラウザ上のフォームから投稿できます。
 
-ロゴを差し替える場合は `サイト設定` からロゴ画像を変更するか、[`assets/images/club-logo.svg`](./assets/images/club-logo.svg) を差し替えてください。
+ロゴを差し替える場合は `サイト設定` からロゴ画像を変更するか、[`_data/site.yml`](./_data/site.yml) の `branding.logo_black` / `branding.logo_white` を更新してください。画像ファイル自体を差し替える場合は [`assets/images/club-logo-black.svg`](./assets/images/club-logo-black.svg) と [`assets/images/club-logo-white.svg`](./assets/images/club-logo-white.svg) を置き換えます。
 
 ### 手動で追加する
 
@@ -83,4 +83,5 @@ published: true
 - 記事: `_posts/`
 - ロボ紹介: `_robots/`
 - お問い合わせページ本文: `contact.md`
-- ロゴ画像: `assets/images/club-logo.svg`
+- ロゴ設定: `_data/site.yml` の `branding.logo_black` / `branding.logo_white`
+- ロゴ画像ファイル: `assets/images/club-logo-black.svg`, `assets/images/club-logo-white.svg`
