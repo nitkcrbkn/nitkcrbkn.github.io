@@ -5,7 +5,7 @@ team: Aチーム
 award: 地区マブチモーター株式会社賞 / 全国デザイン賞
 overview: "2024年Aチーム。8年ぶりの全国大会出場を果たし、全国大会でデザイン賞を受賞。"
 image: "/assets/images/roboken.png"
-permalink: /robot/2024-kisapen-ettotai/
+permalink: /robot/2024-kisapen-etto-tai/
 published: true
 ---
 2024年競技「ロボたちの帰還」に挑んだAチームの機体です。BOXの回収とジャンプによる帰還を組み合わせた構成で、関東甲信越地区大会では予選2連勝を記録しました。

@@ -67,9 +67,10 @@ published: true
 ---
 title: "機体名"
 year: 2026
+team: "Aチーム"
+award: "受賞・実績"
 overview: "機体の概要"
 image: "/assets/images/uploads/sample.jpg"
-status: "制作中"
 published: true
 ---
 ここに詳細を書きます。

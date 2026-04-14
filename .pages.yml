@@ -41,7 +41,7 @@ content:
     format: yaml-frontmatter
     filename: "{year}-{primary}.md"
     view:
-      fields: [title, year, status]
+      fields: [title, year, team, award]
       primary: title
       sort: [year, title]
       default:
@@ -56,8 +56,11 @@ content:
         label: 年度
         type: number
         required: true
-      - name: status
-        label: ステータス
+      - name: team
+        label: チーム
+        type: string
+      - name: award
+        label: 受賞・実績
         type: string
       - name: overview
         label: 概要
@@ -100,8 +103,11 @@ content:
         label: ロゴ設定
         type: object
         fields:
-          - name: logo
-            label: ロゴ画像
+          - name: logo_black
+            label: ロゴ画像（黒）
+            type: image
+          - name: logo_white
+            label: ロゴ画像（白）
             type: image
           - name: logo_alt
             label: ロゴの代替テキスト

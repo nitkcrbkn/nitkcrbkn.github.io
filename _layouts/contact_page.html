@@ -7,6 +7,12 @@ layout: default
   <p class="lede">{{ page.description }}</p>
 </section>
 
+{% if content != "" %}
+<section class="panel prose-block">
+  {{ content }}
+</section>
+{% endif %}
+
 <section class="contact-grid contact-grid--single">
   <article class="panel contact-card reveal">
     <div class="section-heading section-heading--compact">
