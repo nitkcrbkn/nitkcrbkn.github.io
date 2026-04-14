@@ -7,11 +7,11 @@ published: true
 2025年10月12日、高専ロボコン2025 関東甲信越地区大会に出場しました。今年の競技課題は「Great High Gate」です。
 
 <figure>
-  <img src="{{ '/assets/images/uploads/2025-10-12-robocon-2025-district-A.jpg' | relative_url }}" alt="Aチーム「それゆけキサンタクロース」">
+  <img src="{{ '/assets/images/roboken.png' | relative_url }}" alt="Aチーム「それゆけキサンタクロース」">
   <figcaption>Aチーム「それゆけキサンタクロース」</figcaption>
 </figure>
 <figure>
-  <img src="{{ '/assets/images/uploads/2025-10-12-robocon-2025-district-B.jpg' | relative_url }}" alt="Bチーム「オクト pass gate」">
+  <img src="{{ '/assets/images/roboken.png' | relative_url }}" alt="Bチーム「オクト pass gate」">
   <figcaption>Bチーム「オクト pass gate」</figcaption>
 </figure>
 

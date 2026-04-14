@@ -10,6 +10,22 @@ document.addEventListener("DOMContentLoaded", function () {
   var root = document.documentElement;
   var darkModeMedia = window.matchMedia("(prefers-color-scheme: dark)");
 
+  function getStoredTheme() {
+    try {
+      return localStorage.getItem("theme");
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function setStoredTheme(theme) {
+    try {
+      localStorage.setItem("theme", theme);
+    } catch (error) {
+      /* ignore storage failures and keep the in-memory theme */
+    }
+  }
+
   function applyMenuToggleState(isOpen) {
     if (!toggle) {
       return;
@@ -41,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (persist) {
-      localStorage.setItem("theme", nextTheme);
+      setStoredTheme(nextTheme);
     }
   }
 
@@ -54,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     darkModeMedia.addEventListener("change", function (event) {
-      if (localStorage.getItem("theme")) {
+      if (getStoredTheme()) {
         return;
       }
       applyTheme(event.matches ? "dark" : "light", false);
