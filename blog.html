@@ -1,14 +1,26 @@
 ---
 layout: default
 title: 記事一覧
+body_class: archive-page
+permalink: /blog/
 ---
+<section class="page-hero panel">
+  <h1>記事一覧</h1>
+</section>
 
-<h1>ブログ一覧</h1>
-{% for post in site. posts %}
-<li>
-    <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
-    </a>
-    <small>（{{ post.date | date: "%Y-%m-%d" }}）</small>
-</li>
-{% endfor %}
+<section class="archive-grid">
+  {% for post in site.posts %}
+    <article class="archive-card reveal">
+      <div class="content-card__meta">
+        <span>{{ post.date | date: "%Y.%m.%d" }}</span>
+      </div>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p>{{ post.summary | default: post.excerpt | strip_html | strip_newlines | truncate: 140 }}</p>
+      <a class="text-link" href="{{ post.url | relative_url }}">続きを読む</a>
+    </article>
+  {% else %}
+    <section class="panel empty-panel reveal">
+      <h2>まだ記事はありません</h2>
+    </section>
+  {% endfor %}
+</section>

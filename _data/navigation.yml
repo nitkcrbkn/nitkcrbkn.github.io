@@ -1,0 +1,15 @@
+- label: ホーム
+  url: /
+  match: /
+- label: ロボ紹介
+  url: /robot/
+  match: /robot/
+- label: 記事一覧
+  url: /blog/
+  match: /blog/
+- label: 支援・協賛
+  url: /support/
+  match: /support/
+- label: お問い合わせ
+  url: /contact/
+  match: /contact/

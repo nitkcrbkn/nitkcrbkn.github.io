@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<section class="page-hero panel">
+  <p class="eyebrow">Contact</p>
+  <h1>{{ page.title }}</h1>
+  <p class="lede">{{ page.description }}</p>
+</section>
+
+{% if content | strip != "" %}
+<section class="panel prose-block">
+  {{ content }}
+</section>
+{% endif %}
+
+<section class="contact-grid contact-grid--single">
+  <article class="panel contact-card reveal">
+    <div class="section-heading section-heading--compact">
+      <p class="eyebrow">Contact Method</p>
+      <h2>現在の窓口</h2>
+      {% if site.data.site.contact.intro %}
+      <p>{{ site.data.site.contact.intro }}</p>
+      {% endif %}
+    </div>
+    <div class="contact-list">
+      {% for method in site.data.site.contact.methods %}
+        <a class="contact-list__item" href="{{ method.url }}" target="_blank" rel="noopener noreferrer">
+          <span class="contact-list__label">{{ method.name }}</span>
+          <strong>{{ method.value }}</strong>
+          {% if method.note %}
+          <span>{{ method.note }}</span>
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+    {% if site.data.site.contact.editorial_note %}
+    <p class="editorial-note">{{ site.data.site.contact.editorial_note }}</p>
+    {% endif %}
+  </article>
+</section>

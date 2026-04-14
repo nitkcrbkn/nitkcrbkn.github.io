@@ -1,21 +1,39 @@
 ---
 layout: default
 title: 歴代ロボ
+body_class: archive-page
+permalink: /robot/
 ---
-<link rel="stylesheet" href="{{ '/assets/css/robot.css' | relative_url }}"/>
-<p>2023年以前のロボットについても将来的には掲載したいと考えています。</p>
-{% assign robots_by_year = site.robots | group_by: "year"%}
-{% for year_group in robots_by_year %}
-<h2 class="year-text">{{ year_group.name }}年</h2>
-<div class="robot-intro-field">
-    {% for page in year_group.items %}
-    <a class="robot-intro-card" href="{{ page.url }}">
-        <div>
-            <h3 class="robot-intro-title">{{ page.title }}</h3>
-            <p>{{page.overview}}</p>
-        </div>
-        <img src="{{ page.image }}" alt="{{ project.title }}" class="robot-intro-image" />
-    </a>
-    {% endfor %}
-</div>
-{% endfor %}
+{% assign robots_sorted = site.robots | sort: "year" | reverse %}
+{% assign robots_by_year = robots_sorted | group_by: "year" %}
+
+<section class="page-hero panel">
+  <h1>歴代ロボ</h1>
+  <p class="lede">{{ site.data.site.robot_archive_intro }}</p>
+</section>
+
+<section class="robot-year-list">
+  {% for year_group in robots_by_year %}
+    <section class="panel robot-year-section reveal">
+      <h2>{{ year_group.name }}年</h2>
+      <div class="robot-card-grid reveal-stagger">
+        {% for robot in year_group.items %}
+          <a class="robot-card" href="{{ robot.url | relative_url }}">
+            <div class="robot-card__copy">
+              <h3>{{ robot.title }}</h3>
+              <p>{{ robot.overview }}</p>
+            </div>
+            {% assign thumb = robot.image | default: '/assets/images/roboken.png' %}
+            <div class="robot-card__image">
+              <img src="{{ thumb | relative_url }}" alt="{{ robot.title }}" loading="lazy">
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+  {% else %}
+    <section class="panel empty-panel reveal">
+      <h2>ロボ情報はまだありません</h2>
+    </section>
+  {% endfor %}
+</section>
