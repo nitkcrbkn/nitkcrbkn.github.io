@@ -185,6 +185,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }, { passive: true });
 
+    updateBackToTop();
+
     backToTop.addEventListener("click", function () {
       window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
     });
