@@ -14,7 +14,8 @@ Jekyll で構成した GitHub Pages 向けのサイトです。公開、ロー�
 
 3. ローカルサーバを起動する
 
-   ```bashデザイン賞
+   ```bash
+   bundle exec jekyll serve --livereload
    ```
 
 4. ブラウザで `http://127.0.0.1:4000` を開く
