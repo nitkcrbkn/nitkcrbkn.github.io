@@ -7,7 +7,7 @@ layout: default
   <p class="lede">{{ page.description }}</p>
 </section>
 
-{% if content != "" %}
+{% if content | strip != "" %}
 <section class="panel prose-block">
   {{ content }}
 </section>
