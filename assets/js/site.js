@@ -141,8 +141,16 @@ document.addEventListener("DOMContentLoaded", function () {
       var revealObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            revealObserver.unobserve(entry.target);
+            var target = entry.target;
+            target.classList.add("is-visible");
+            if (target.classList.contains("reveal-stagger")) {
+              /* 1000ms must cover the longest stagger in style.css
+                 (0.40s delay + 0.5s transition) */
+              setTimeout(function () {
+                target.classList.add("is-done");
+              }, 1000);
+            }
+            revealObserver.unobserve(target);
           }
         });
       }, {
@@ -157,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     /* if reduced motion, show everything immediately */
     document.querySelectorAll(".reveal, .reveal-stagger").forEach(function (el) {
-      el.classList.add("is-visible");
+      el.classList.add("is-visible", "is-done");
     });
   }
 
