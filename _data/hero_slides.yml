@@ -1,9 +1,15 @@
 - image: /assets/images/robots/2024/kisapen/start.jpeg
   alt: 競技フィールド上のきさぺん越冬隊と操縦する学生
   caption: 高専ロボコン2024 全国大会 ／ きさぺん越冬隊
-- image: /assets/images/robots/2025/kisantaclaus/competition.webp
-  alt: 地区大会でゲートを通過するそれゆけキサンタクロース
-  caption: 高専ロボコン2025 関東甲信越地区大会 ／ それゆけキサンタクロース
+- image: assets/images/robots/2025/kisantaclaus/build-zenkoku.jpeg
+  alt: 全国大会でゲートを構築するそれゆけキサンタクロース
+  caption: 高専ロボコン2025 全国大会 ／ それゆけキサンタクロース
 - image: /assets/images/robots/2025/octo/competition.webp
   alt: 地区大会でボックスを回収するオクト pass gate
   caption: 高専ロボコン2025 関東甲信越地区大会 ／ オクト pass gate
+- image: assets/images/robots/2026/tanukisa/release.jpeg
+  alt: 地区大会で雑巾を射出するたぬきさ最強伝説
+  caption: 高専ロボコン2025 関東甲信越地区大会 ／ たぬきさ最強伝説
+- image: assets/images/robots/2026/kisarazushi/move-bucket.jpeg
+  alt: 地区大会で相手の移動バケツを狙うきさら寿司
+  caption: 高専ロボコン2026 関東甲信越地区大会 ／ きさら寿司
