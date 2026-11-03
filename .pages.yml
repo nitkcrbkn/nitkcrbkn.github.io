@@ -21,6 +21,22 @@ content:
         label: タイトル
         type: string
         required: true
+      - name: title_parts
+        label: タイトルの改行区切り（任意・つなげるとタイトルと一致するよう入力）
+        type: string
+        list: true
+      - name: description
+        label: 検索・SNS用の説明文（任意）
+        type: text
+      - name: permalink
+        label: 公開URL（任意・変更すると既存リンクに影響します）
+        type: string
+      - name: layout
+        label: レイアウト名（通常は空欄・既定値を使用）
+        type: string
+      - name: body_class
+        label: ページのCSSクラス（任意・詳細設定）
+        type: string
       - name: date
         label: 公開日
         type: date
@@ -28,6 +44,13 @@ content:
       - name: summary
         label: 一言説明
         type: text
+      - name: robots
+        label: 関連するロボット（機体ファイル名から .md を除いた名前）
+        type: string
+        list: true
+      - name: historical_notice
+        label: 掲載当時の情報であることを本文の上に表示する
+        type: boolean
       - name: category
         label: カテゴリ（大会・展示／体験・ご支援など）
         type: string
@@ -66,6 +89,22 @@ content:
         label: 機体名
         type: string
         required: true
+      - name: title_parts
+        label: タイトルの改行区切り（任意・つなげるとタイトルと一致するよう入力）
+        type: string
+        list: true
+      - name: description
+        label: 検索・SNS用の説明文（任意）
+        type: text
+      - name: permalink
+        label: 公開URL（任意・変更すると既存リンクに影響します）
+        type: string
+      - name: layout
+        label: レイアウト名（通常は空欄・既定値を使用）
+        type: string
+      - name: body_class
+        label: ページのCSSクラス（任意・詳細設定）
+        type: string
       - name: year
         label: 年度
         type: number
