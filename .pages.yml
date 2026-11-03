@@ -1,4 +1,6 @@
-media: assets/images/uploads
+media:
+  input: assets/images
+  output: /assets/images
 
 content:
   - name: posts
@@ -26,6 +28,18 @@ content:
       - name: summary
         label: 一言説明
         type: text
+      - name: category
+        label: カテゴリ（大会・展示／体験・ご支援など）
+        type: string
+      - name: image
+        label: 一覧に表示する写真（任意）
+        type: image
+      - name: image_width
+        label: 写真の幅（px）
+        type: number
+      - name: image_height
+        label: 写真の高さ（px）
+        type: number
       - name: published
         label: 公開する
         type: boolean
@@ -59,6 +73,9 @@ content:
       - name: team
         label: チーム
         type: string
+      - name: competition
+        label: 競技テーマ
+        type: string
       - name: award
         label: 受賞・実績
         type: string
@@ -66,8 +83,51 @@ content:
         label: 概要
         type: text
       - name: image
-        label: 画像
+        label: 代表写真（一覧・詳細の先頭）
         type: image
+      - name: image_width
+        label: 写真の幅（px）
+        type: number
+      - name: image_height
+        label: 写真の高さ（px）
+        type: number
+      - name: image_alt
+        label: 写真の説明（代替テキスト）
+        type: string
+      - name: image_caption
+        label: 写真の下に表示する説明
+        type: string
+      - name: image_source
+        label: 写真の出典URL（木更津高専）
+        type: string
+      - name: gallery
+        label: 追加の写真（登録順に表示）
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: 写真
+            type: image
+            required: true
+          - name: alt
+            label: 写真の説明（代替テキスト）
+            type: string
+            required: true
+          - name: caption
+            label: 写真の下に表示する説明
+            type: text
+          - name: source_url
+            label: 出典URL（任意）
+            type: string
+          - name: source_label
+            label: 出典の表示名（任意）
+            type: string
+          - name: width
+            label: 写真の幅（px・任意）
+            type: number
+          - name: height
+            label: 写真の高さ（px・任意）
+            type: number
       - name: published
         label: 公開する
         type: boolean
@@ -75,6 +135,31 @@ content:
       - name: body
         label: 詳細
         type: rich-text
+
+  - name: hero_slides
+    label: トップの写真
+    type: file
+    path: _data/hero_slides.yml
+    format: yaml
+    list: true
+    fields:
+      - name: image
+        label: 写真
+        type: image
+        required: true
+      - name: alt
+        label: 写真の説明（代替テキスト）
+        type: string
+        required: true
+      - name: caption
+        label: 表示する説明
+        type: string
+      - name: source_url
+        label: 出典URL
+        type: string
+      - name: source_label
+        label: 出典の表示名
+        type: string
 
   - name: contact
     label: お問い合わせページ

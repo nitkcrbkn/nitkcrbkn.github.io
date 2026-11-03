@@ -5,13 +5,9 @@ description: 指定されたページは存在しないか、移動した可能�
 permalink: /404.html
 body_class: not-found-page
 ---
-<section class="panel not-found">
-  <p class="eyebrow">404</p>
-  <p style="font-size: clamp(3rem, 10vw, 5rem); line-height: 1;" aria-hidden="true">🤖</p>
-  <h1>ページが見つかりません</h1>
-  <p class="lede">URL が変わったか、まだ公開されていないページです。トップページか一覧ページから探してください。</p>
-  <div class="button-row" style="justify-content: center;">
-    <a class="button button--primary" href="{{ '/' | relative_url }}">ホームへ戻る</a>
-    <a class="button button--ghost" href="{{ '/blog/' | relative_url }}">記事一覧を見る</a>
-  </div>
+<section class="not-found page-heading">
+  <p class="error-code">404</p>
+  <h1><span class="name-part">ページが</span><span class="name-part">見つかりません</span></h1>
+  <p class="lede">ページが移動したか、URLが間違っている可能性があります。<br>ホームや活動報告の一覧からお探しください。</p>
+  <div class="button-row"><a class="button button--primary" href="{{ '/' | relative_url }}">ホームに戻る</a><a class="button button--secondary" href="{{ '/blog/' | relative_url }}">活動報告を見る</a></div>
 </section>

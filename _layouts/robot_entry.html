@@ -2,32 +2,29 @@
 layout: default
 ---
 <article class="entry entry-robot">
-  <section class="robot-hero panel">
-    <div class="robot-hero__copy">
-      <a class="back-link" href="{{ '/robot/' | relative_url }}">ロボ紹介へ戻る</a>
-      <h1>{{ page.title }}</h1>
-      <div class="entry-meta">
-        {% if page.year %}
-          <span>{{ page.year }}</span>
-        {% endif %}
-        {% if page.team %}
-          <span>{{ page.team }}</span>
-        {% endif %}
-        {% if page.award %}
-          <span>{{ page.award }}</span>
-        {% endif %}
-      </div>
-      {% if page.overview %}
-        <p class="lede">{{ page.overview }}</p>
-      {% endif %}
-    </div>
-    <div class="robot-hero__visual">
-      {% assign hero_image = page.image | default: '/assets/images/roboken.png' %}
-      <img src="{{ hero_image | relative_url }}" alt="{{ page.title }}">
+  <header class="robot-heading"><div class="robot-heading__meta"><p class="entry-meta"><a href="{{ '/robot/' | relative_url }}#year-{{ page.year }}" aria-label="{{ page.year }}年のロボット一覧">{{ page.year }}年</a>{% if page.team %}<span> ／ {{ page.team }}</span>{% endif %}</p></div><h1>{% include display_title.html item=page %}</h1></header>
+  <div class="robot-introduction{% unless page.image %} robot-introduction--text{% endunless %}">
+    {% if page.image and page.image != '/assets/images/roboken.png' %}
+    <figure class="robot-photo"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}" width="{{ page.image_width | default: 1200 }}" height="{{ page.image_height | default: 800 }}" decoding="async" fetchpriority="high">{% if page.image_caption or page.image_source %}<figcaption>{{ page.image_caption }}{% if page.image_source %} <a href="{{ page.image_source }}">写真：木更津高専</a>{% endif %}</figcaption>{% endif %}</figure>
+    {% endif %}
+    <dl class="robot-facts"><div><dt>出場大会</dt><dd>高専ロボコン {{ page.year }}</dd></div>{% if page.competition %}<div><dt>競技テーマ</dt><dd>{{ page.competition }}</dd></div>{% endif %}{% if page.award %}<div><dt>主な実績</dt><dd>{{ page.award }}</dd></div>{% endif %}</dl>
+  </div>
+  <div class="robot-reading"><h2>特徴・成績</h2><div class="prose-block">{{ content }}</div></div>
+  {% assign gallery_photos = page.gallery | where_exp: 'photo', 'photo.image != nil' | where_exp: 'photo', 'photo.image != empty' %}
+  {% if gallery_photos.size > 0 %}
+  <section class="robot-gallery" aria-labelledby="gallery-title">
+    <h2 id="gallery-title">写真</h2>
+    <div class="robot-gallery__photos">
+      {% for photo in gallery_photos %}
+      <figure>
+        <a class="robot-gallery__link" href="{{ photo.image | relative_url }}"><img src="{{ photo.image | relative_url }}" alt="{{ photo.alt | default: page.title | escape }}"{% if photo.width and photo.height %} width="{{ photo.width }}" height="{{ photo.height }}"{% endif %} loading="lazy" decoding="async"></a>
+        {% if photo.caption or photo.source_url %}<figcaption>{{ photo.caption | escape }}{% if photo.source_url %} <a href="{{ photo.source_url | escape }}">{{ photo.source_label | default: '写真の出典' | escape }}</a>{% endif %}</figcaption>{% endif %}
+      </figure>
+      {% endfor %}
     </div>
   </section>
-
-  <section class="panel prose-block">
-    {{ content }}
-  </section>
+  {% endif %}
+  {% assign related = site.posts | where_exp: 'post', 'post.robots contains page.slug' %}
+  {% if related.size > 0 %}<section class="related-posts" aria-labelledby="related-title"><h2 id="related-title">関連する活動報告</h2><ul>{% for post in related %}<li><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y.%m.%d' }}</time><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>{% endfor %}</ul></section>{% endif %}
+  <div class="entry-bottom"><a class="text-link" href="{{ '/robot/' | relative_url }}">歴代のロボットを見る</a></div>
 </article>

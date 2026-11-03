@@ -1,26 +1,31 @@
 ---
 layout: default
-title: 記事一覧
+title: 活動報告
+description: ロボット研究同好会の活動報告です。ロボコンの大会結果や地域での展示・操縦体験、ご支援についてお知らせします。
 body_class: archive-page
 permalink: /blog/
 ---
-<section class="page-hero panel">
-  <h1>記事一覧</h1>
-</section>
-
-<section class="archive-grid">
+<header class="page-heading"><h1>活動報告</h1><p class="lede">大会や展示の様子、活動に関するお知らせを掲載しています。</p></header>
+{% assign featured = site.posts | first %}
+{% if featured %}
+<article class="featured-post">
+  {% if featured.image %}<a class="featured-post__image" href="{{ featured.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ featured.image | relative_url }}" alt="" width="{{ featured.image_width }}" height="{{ featured.image_height }}" fetchpriority="high" decoding="async"></a>{% endif %}
+  <div class="featured-post__copy"><div class="post-meta"><time datetime="{{ featured.date | date: '%Y-%m-%d' }}">{{ featured.date | date: '%Y.%m.%d' }}</time><span class="category-label">{{ featured.category }}</span></div><h2><a href="{{ featured.url | relative_url }}">{% include display_title.html item=featured %}</a></h2><p>{{ featured.summary }}</p></div>
+</article>
+{% endif %}
+<section class="post-archive" aria-labelledby="all-posts-title" data-post-archive>
+  <div class="section-heading"><h2 id="all-posts-title">すべての記事</h2><p class="result-count" role="status" aria-live="polite" data-result-count>{{ site.posts.size }}件</p></div>
+  <div class="post-filters" aria-label="記事のカテゴリ" role="group" data-post-filters hidden>
+    <button type="button" aria-pressed="true" data-category="all">すべて</button>
+    {% assign categories = site.posts | map: 'category' | uniq %}{% for category in categories %}<button type="button" aria-pressed="false" data-category="{{ category | default: 'お知らせ' | escape }}">{{ category | default: 'お知らせ' }}</button>{% endfor %}
+  </div>
+  <div class="post-grid">
   {% for post in site.posts %}
-    <article class="archive-card reveal">
-      <div class="content-card__meta">
-        <span>{{ post.date | date: "%Y.%m.%d" }}</span>
-      </div>
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      <p>{{ post.summary | default: post.excerpt | strip_html | strip_newlines | truncate: 140 }}</p>
-      <a class="text-link" href="{{ post.url | relative_url }}">続きを読む</a>
+    <article class="post-preview{% unless post.image %} post-preview--text{% endunless %}" data-post-category="{{ post.category | default: 'お知らせ' | escape }}">
+      {% if post.image %}<a class="post-preview__image" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ post.image | relative_url }}" alt="" width="{{ post.image_width | default: 1200 }}" height="{{ post.image_height | default: 800 }}" loading="lazy" decoding="async"></a>{% endif %}
+      <div class="post-preview__copy"><div class="post-meta"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y.%m.%d' }}</time><span class="category-label">{{ post.category | default: 'お知らせ' }}</span></div><h3><a href="{{ post.url | relative_url }}">{% include display_title.html item=post %}</a></h3><p>{{ post.summary | default: post.excerpt | strip_html }}</p></div>
     </article>
-  {% else %}
-    <section class="panel empty-panel reveal">
-      <h2>まだ記事はありません</h2>
-    </section>
-  {% endfor %}
+  {% else %}<p class="empty-state">活動報告はまだありません。</p>{% endfor %}
+  </div>
+  <p class="empty-state" data-empty-results hidden>このカテゴリの記事はまだありません。</p>
 </section>

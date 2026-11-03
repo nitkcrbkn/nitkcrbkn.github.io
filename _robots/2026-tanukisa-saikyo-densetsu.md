@@ -1,0 +1,23 @@
+---
+title: "たぬきさ最強伝説"
+title_parts: [たぬきさ, 最強伝説]
+year: 2026
+team: Aチーム
+overview: "3種類の発射機構を使い分け、様々な目標へ得点を狙うロボットです。"
+permalink: /robot/2026-tanukisa-saikyo-densetsu/
+published: false
+image: "assets/images/robots/2026/tanukisa/release.jpeg"
+image_width: 604
+image_height: 402
+image_alt: "バケツに向かって雑巾を射出するロボット"
+image_caption: "高専ロボコン2026 関東甲信越地区大会"
+gallery:
+  - image: assets/images/robots/2026/tanukisa/charge.jpeg
+    alt: ロボットに雑巾を装填する様子
+    caption: ロボットに雑巾を装填する様子
+  - image: assets/images/robots/2026/tanukisa/kenka-jo-to-.jpeg
+    alt: 「喧嘩上等」が書かれた黒板
+    caption: 「喧嘩上等」が書かれた黒板
+competition: "高専杯雑巾投擲選手権"
+---
+

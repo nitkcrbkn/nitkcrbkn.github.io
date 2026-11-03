@@ -1,0 +1,3 @@
+{% assign joined_title = include.item.title_parts | join: '' | strip %}
+{% assign plain_title = include.item.title | strip %}
+{% if include.item.title_parts and joined_title == plain_title %}{% for part in include.item.title_parts %}<span class="name-part">{{ part }}</span>{% endfor %}{% else %}{{ include.item.title }}{% endif %}

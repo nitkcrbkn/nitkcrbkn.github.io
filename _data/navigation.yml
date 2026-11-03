@@ -1,10 +1,10 @@
 - label: ホーム
   url: /
   match: /
-- label: ロボ紹介
+- label: ロボット紹介
   url: /robot/
   match: /robot/
-- label: 記事一覧
+- label: 活動報告
   url: /blog/
   match: /blog/
 - label: 支援・協賛

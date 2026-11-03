@@ -1,22 +1,10 @@
 ---
 layout: page
 title: 支援・協賛
-description: ロボ研の活動を支えてくださっている企業・団体・学内外の連携先を紹介します。
+description: ロボ研は、技術や設備のご支援、地域からの応援を受けて活動しています。
 body_class: basic-page
-kicker: Support & Sponsors
 permalink: /support/
 ---
-{{ site.data.site.support.note }}
-
-<div class="archive-grid archive-grid--support">
-  {% for item in site.data.site.support.companies %}
-    <article class="content-card content-card--support">
-      <div class="content-card__meta">
-        <span>{{ item.category }}</span>
-      </div>
-      <h3>{{ item.name }}</h3>
-      <p>{{ item.description }}</p>
-      <a class="text-link" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.url_label }}</a>
-    </article>
-  {% endfor %}
-</div>
+<p class="support-intro">{{ site.data.site.support.note }}</p>
+<div class="sponsor-list">{% for item in site.data.site.support.companies %}<section class="sponsor"><div><p class="sponsor__category">{{ item.category }}</p><h2>{{ item.name }}</h2></div><div><p>{{ item.description }}</p><a class="text-link" href="{{ item.url }}">{{ item.url_label }}</a></div></section>{% endfor %}</div>
+<section class="support-callout" aria-labelledby="support-contact"><h2 id="support-contact">ご支援に関するお問い合わせ</h2><div><p>ロボ研へのご支援について、公式XのDMでお問い合わせください。</p><a class="text-link" href="{{ '/contact/' | relative_url }}">連絡先を確認する</a></div></section>

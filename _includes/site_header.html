@@ -15,10 +15,9 @@
       <span></span>
       <span></span>
       <span></span>
-      <span class="sr-only" data-menu-toggle-label>メニューを開く</span>
     </button>
 
-    <nav class="site-nav" id="site-nav" data-nav>
+    <nav class="site-nav" id="site-nav" aria-label="メインナビゲーション" data-nav>
       {% for item in site.data.navigation %}
         {% assign active = false %}
         {% if item.url == '/' %}
@@ -28,11 +27,11 @@
         {% elsif current_url == item.url or current_url contains item.match %}
           {% assign active = true %}
         {% endif %}
-        <a class="site-nav__link{% if active %} is-active{% endif %}" href="{{ item.url | relative_url }}">{{ item.label }}</a>
+        <a class="site-nav__link{% if active %} is-active{% endif %}" href="{{ item.url | relative_url }}"{% if active %} aria-current="{% if current_url == item.url %}page{% else %}true{% endif %}"{% endif %}>{{ item.label }}</a>
       {% endfor %}
       <button class="theme-toggle" type="button" aria-label="ダークモード" aria-pressed="false" data-theme-toggle>
-        <span class="theme-toggle__icon" aria-hidden="true"></span>
-        <span class="sr-only" data-theme-toggle-label>ダークモード</span>
+        <svg class="theme-toggle__moon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.5 13.3A8.5 8.5 0 0 1 10.7 3.5a8.5 8.5 0 1 0 9.8 9.8Z"/></svg>
+        <svg class="theme-toggle__sun" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4.2 4.2l2.1 2.1m11.4 11.4 2.1 2.1M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
       </button>
     </nav>
   </div>

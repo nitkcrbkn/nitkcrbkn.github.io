@@ -1,56 +1,54 @@
 ---
 layout: default
 title: ホーム
-description: 木更津高専ロボット研究同好会の公式サイトです。
+description: 木更津高専ロボット研究同好会の公式サイトです。NHK高専ロボコンを中心に製作したロボットや、大会・展示の様子を紹介します。
+image: /assets/images/robots/2024/kisapen/competition.webp
+hero_image_width: 700
+hero_image_height: 466
+hero_image_alt: 高専ロボコン2024の競技フィールド上の「きさぺん越冬隊」と操縦する学生
+hero_image_caption: 高専ロボコン2024 関東甲信越地区大会 ／ きさぺん越冬隊
+hero_image_source: https://www.kisarazu.ac.jp/news/%E3%82%A2%E3%82%A4%E3%83%87%E3%82%A2%E5%AF%BE%E6%B1%BA%E3%83%BB%E5%85%A8%E5%9B%BD%E9%AB%98%E7%AD%89%E5%B0%82%E9%96%80%E5%AD%A6%E6%A0%A1%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%82%B3%E3%83%B3%E3%83%86-4/
 body_class: home-page
 ---
-<section class="page-hero panel">
-  <p class="eyebrow">Home</p>
-  <h1>{{ site.data.site.club.name }}</h1>
-  <p class="lede">{{ site.data.site.club.description }}</p>
-  <div class="button-row">
-    <a class="button button--primary" href="{{ '/robot/' | relative_url }}">歴代ロボを見る</a>
-    <a class="button button--ghost" href="{{ '/blog/' | relative_url }}">記事一覧を見る</a>
+{% assign hero_robot = site.robots | where: "title", "きさぺん越冬隊" | first %}
+<section class="home-hero" aria-labelledby="home-title">
+  <figure class="home-hero__figure" data-hero-slideshow aria-label="大会でのロボットの写真">
+    <div class="home-hero__scene">
+      {% for slide in site.data.hero_slides %}
+      <img data-hero-slide src="{{ slide.image | relative_url }}" alt="{{ slide.alt | escape }}" decoding="async" fetchpriority="{% if forloop.first %}high{% else %}low{% endif %}"{% unless forloop.first %} hidden{% endunless %}>
+      {% endfor %}
+      <div class="home-hero__heading">
+        <p class="home-hero__school">木更津工業高等専門学校</p>
+        <h1 id="home-title"><span>ロボット</span><span>研究同好会</span></h1>
+      </div>
+    <div class="hero-controls" data-hero-controls hidden>
+      <div role="group" aria-label="表示する写真">{% for slide in site.data.hero_slides %}<button type="button" data-hero-select="{{ forloop.index0 }}" aria-label="写真{{ forloop.index }}：{{ slide.alt | escape }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}"><span class="hero-dot" aria-hidden="true"></span></button>{% endfor %}</div>
+    </div>
+    </div>
+    <figcaption>
+      {% for slide in site.data.hero_slides %}<span data-hero-caption{% unless forloop.first %} hidden{% endunless %}>{{ slide.caption | escape }}{% if slide.source_url %} <a href="{{ slide.source_url | escape }}">{{ slide.source_label | default: '写真の出典' | escape }}</a>{% endif %}</span>{% endfor %}
+    </figcaption>
+
+  </figure>
+</section>
+<section class="home-news" aria-labelledby="news-title">
+  <div class="section-heading"><h2 id="news-title">活動報告</h2><a class="text-link" href="{{ '/blog/' | relative_url }}">一覧を見る</a></div>
+  <div class="news-list">
+    {% for post in site.posts limit: 3 %}
+    <a class="news-list__item" href="{{ post.url | relative_url }}"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y.%m.%d' }}</time><span class="category-label">{{ post.category | default: 'お知らせ' }}</span><h3>{{ post.title }}</h3><span class="link-chevron" aria-hidden="true">{% include icon_chevron.html %}</span></a>
+    {% else %}<p class="empty-state">活動報告はまだありません。</p>{% endfor %}
   </div>
 </section>
-
-{% assign stats_sorted = site.data.site.stats | sort: "value" %}
-
-<section class="split-layout home-summary">
-  <article class="panel reveal home-summary__panel">
-    <div class="section-heading section-heading--compact">
-      <p class="eyebrow">Highlights</p>
-      <h2>主な実績</h2>
-    </div>
-    <div class="stack-list reveal-stagger">
-      {% for item in stats_sorted %}
-      <article class="content-card">
-        <div class="content-card__meta">
-          <span>{{ item.value }}</span>
-        </div>
-        <h3>{{ item.label }}</h3>
-      </article>
-      {% endfor %}
-    </div>
-  </article>
-  <article class="panel reveal home-summary__panel">
-    <div class="section-heading section-heading--compact">
-      <p class="eyebrow">Blog</p>
-      <h2>最近の記事</h2>
-    </div>
-    <div class="stack-list">
-      {% for post in site.posts limit: 2 %}
-      <article class="content-card">
-        <div class="content-card__meta">
-          <span>{{ post.date | date: "%Y.%m.%d" }}</span>
-        </div>
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p>{{ post.summary | default: post.excerpt | strip_html | strip_newlines | truncate: 110 }}</p>
-      </article>
-      {% else %}
-      <p class="empty-state">まだ記事はありません。</p>
-      {% endfor %}
-    </div>
-    <a class="text-link" href="{{ '/blog/' | relative_url }}">記事一覧を見る</a>
-  </article>
+<section class="section home-robots" aria-labelledby="robots-title">
+  <div class="section-heading"><div><h2 id="robots-title">製作したロボット</h2></div><a class="text-link" href="{{ '/robot/' | relative_url }}">歴代のロボット</a></div>
+  <div class="robot-card-grid">{% assign featured_robots = site.robots | sort: 'year' | reverse %}{% for robot in featured_robots limit: 2 %}{% include robot_card.html robot=robot show_year=true %}{% endfor %}</div>
 </section>
+{% assign workshop = site.posts | where_exp: 'post', "post.url contains 'aeon-workshop'" | first %}
+{% if workshop %}
+<section class="activity-feature" aria-labelledby="activity-title">
+  <div class="activity-feature__copy"><h2 id="activity-title">展示・操縦体験</h2><p>大会への出場に加え、地域でロボットの展示や操縦体験を行っています。</p><p>イオンモール木更津で開催した展示・操縦体験には、小・中学生39名が参加しました。ロボ研の学生が操作方法を説明し、参加者にはロボットの動きや仕組みを間近で見ながら操縦を楽しんでもらいました。</p><a class="text-link" href="{{ workshop.url | relative_url }}">展示・操縦体験の報告を読む</a></div>
+  <figure><img src="{{ workshop.image | relative_url }}" width="1440" height="1080" loading="lazy" decoding="async" alt="イオンモール木更津で展示した「きさぺん越冬隊」と操縦体験の会場"><figcaption>2025年3月22日 イオンモール木更津</figcaption></figure>
+</section>
+{% endif %}
+<section class="section achievements" aria-labelledby="achievements-title"><h2 id="achievements-title">主な大会実績</h2><dl class="achievement-list">{% assign stats_sorted = site.data.site.stats | sort: 'value' | reverse %}{% for item in stats_sorted %}<div><dt>{{ item.value }}<span>年</span></dt><dd>{{ item.label }}</dd></div>{% endfor %}</dl></section>
+<section class="support-callout" aria-labelledby="support-title"><h2 id="support-title">活動を支えてくださる皆さま</h2><div><p>技術や設備の支援、地域の皆さまからの応援に感謝いたします。</p><a class="text-link" href="{{ '/support/' | relative_url }}">支援・協賛のご紹介</a></div></section>

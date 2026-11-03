@@ -1,0 +1,16 @@
+{% assign robot = include.robot %}
+<article class="robot-card{% unless robot.image %} robot-card--text{% endunless %}">
+  <a class="robot-card__link" href="{{ robot.url | relative_url }}">
+    {% if robot.image and robot.image != '/assets/images/roboken.png' %}
+      <div class="robot-card__image">
+        <img src="{{ robot.image | relative_url }}" alt="{{ robot.image_alt | default: robot.title | escape }}" width="{{ robot.image_width | default: 1200 }}" height="{{ robot.image_height | default: 800 }}" loading="lazy" decoding="async">
+      </div>
+    {% endif %}
+    <div class="robot-card__copy">
+      <p class="robot-card__meta">{% if include.show_year %}{{ robot.year }}年{% if robot.team %} ／ {% endif %}{% endif %}{{ robot.team }}</p>
+      <h3><span>{% include display_title.html item=robot %}</span><span class="link-chevron" aria-hidden="true">{% include icon_chevron.html %}</span></h3>
+      <p>{{ robot.overview }}</p>
+      {% if robot.award %}<p class="robot-card__award">{{ robot.award }}</p>{% endif %}
+    </div>
+  </a>
+</article>

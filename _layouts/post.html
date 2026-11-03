@@ -2,15 +2,10 @@
 layout: default
 ---
 <article class="entry entry-post">
-  <section class="page-hero panel">
-    <a class="back-link" href="{{ '/blog/' | relative_url }}">記事一覧へ戻る</a>
-    <h1>{{ page.title }}</h1>
-    <div class="entry-meta">
-      <span>{{ page.date | date: "%Y.%m.%d" }}</span>
-    </div>
-  </section>
-
-  <section class="panel prose-block">
-    {{ content }}
-  </section>
+  <header class="page-heading"><a class="back-link" href="{{ '/blog/' | relative_url }}">活動報告一覧</a><div class="post-meta"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y年%m月%d日' }}</time><span class="category-label">{{ page.category | default: 'お知らせ' }}</span></div><h1>{% include display_title.html item=page %}</h1></header>
+  {% if page.historical_notice %}<p class="historical-notice">この記事は{{ page.date | date: '%Y年%m月%d日' }}掲載当時の情報です。</p>{% endif %}
+  <div class="prose-block">{{ content }}</div>
+  {% if page.robots %}<section class="related-posts" aria-labelledby="related-title"><h2 id="related-title">登場するロボット</h2><ul>{% for slug in page.robots %}{% assign robot = site.robots | where: 'slug', slug | first %}{% if robot %}<li><span class="entry-meta">{{ robot.year }}年</span><a href="{{ robot.url | relative_url }}">{{ robot.title }}</a></li>{% endif %}{% endfor %}</ul></section>{% endif %}
+  <nav class="article-pagination" aria-label="前後の活動報告">{% if page.previous %}<a href="{{ page.previous.url | relative_url }}"><span>前の記事</span>{{ page.previous.title }}</a>{% endif %}{% if page.next %}<a href="{{ page.next.url | relative_url }}"><span>次の記事</span>{{ page.next.title }}</a>{% endif %}</nav>
+  <div class="entry-bottom"><a class="text-link" href="{{ '/blog/' | relative_url }}">活動報告一覧に戻る</a></div>
 </article>

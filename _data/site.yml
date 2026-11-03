@@ -2,7 +2,7 @@ club:
   school: 木更津工業高等専門学校
   name: 木更津高専ロボット研究同好会
   short_name: ロボット研究同好会
-  description: NHK高専ロボコンを中心に，ロボット制作に取り組む木更津工業高等専門学校の同好会です。
+  description: 木更津工業高等専門学校の同好会です。NHK高専ロボコンを中心に、ロボットを製作しています。
 
 branding:
   logo_black: /assets/images/club-logo-black.svg
@@ -20,30 +20,30 @@ stats:
     label: "「それゆけキサンタクロース」 全国大会出場<br>「オクト pass gate」 安川電機特別賞"
 
 support:
-  note: ロボ研の活動は、技術提供や設備面の後押し、地域からの応援に支えられています。日頃よりお力添えをいただいている皆さまを紹介します。
+  note: 日頃よりお力添えをいただいている企業・団体の皆さまを紹介します。学内外で活動を支えてくださる皆さまにも感謝申し上げます。
   companies:
     - name: STマイクロエレクトロニクス様
-      category: Technical Support
-      description: STM32マイコンをご提供いただいています。制御系の試作、ファームウェア開発、周辺機能の検証を進めるための基盤として活用しています。
+      category: 技術支援
+      description: STM32マイコンをご提供いただいています。制御系の試作やファームウェア開発、周辺機能の検証に活用しています。
       url: https://x.com/kisarazu_RBKN/status/1943513142883160210
-      url_label: X の投稿を見る
+      url_label: Xの投稿を見る
     - name: ジー・オー・ピー株式会社
-      category: Equipment Support
-      description: ロボットを移動するための台車の提供でお力添えをいただいています。
+      category: 設備支援
+      description: ロボットの移動に使う台車をご提供いただいています。
       url: https://www.gop.co.jp/products/
       url_label: 製品情報を見る
     - name: 東京湾横断道路株式会社様
-      category: Local Support
-      description: 木更津に根ざした企業として、ロボ研の挑戦を応援していただいています。地域に支えられながら活動を続けるうえで、心強い存在です。
+      category: 地域からの支援
+      description: 木更津に根ざした企業から、ロボ研の活動を応援していただいています。地域からの応援を心強く感じています。
       url: https://www.aqua-line.co.jp/
       url_label: 企業サイトを見る
     - name: 株式会社三協リール様
-      category: Equipment Support
-      description: コードリールを通して、配線や作業環境まわりを支えていただいています。日々の整備や準備を安定して進める力になっています。
+      category: 設備支援
+      description: コードリールによるご支援は、配線や作業環境を整え、日々の整備や準備を安定して進める助けになっています。
       url: https://www.triens.jp/
       url_label: 企業サイトを見る
 
-robot_archive_intro: 掲載されている歴代機体の記録を通して、ロボ研の歩みをたどれます。
+robot_archive_intro: これまでに製作したロボットの特徴と大会での成績を紹介します。
 
 contact:
   methods:
@@ -52,4 +52,7 @@ contact:
       url: https://x.com/kisarazu_RBKN
 
 footer:
-  tagline: 高専ロボコンを中心に、競技ロボットと地域展示の取り組みを紹介しています。
+  tagline: 高専ロボコンを中心に製作している競技用ロボットや、地域での展示の様子を紹介しています。
+
+photos:
+  district_2025: https://www.kisarazu.ac.jp/news/2025-%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B3%E9%96%A2%E6%9D%B1%E7%94%B2%E4%BF%A1%E8%B6%8A%E5%9C%B0%E5%8C%BA%E5%A4%A7%E4%BC%9A%E5%8F%82%E5%8A%A0%E5%A0%B1%E5%91%8A%EF%BC%88%E3%83%AD%E3%83%9C%E3%83%83/
