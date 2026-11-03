@@ -16,7 +16,6 @@ robots: [2024-kisapen-etto-tai, 2013-kabu-tobimushi]
 
 ロボ研の学生が操作方法を説明しました。参加者には、ロボットの動きや仕組みを間近で見ながら操縦を楽しんでもらいました。
 
-<figure>
-  <img width="1440" height="1080" loading="lazy" decoding="async" src="{{ '/assets/images/robots/2024/kisapen/exhibition.webp' | relative_url }}" alt="イオンモール木更津でのロボット展示・操縦体験">
-  <figcaption>会場の様子</figcaption>
-</figure>
+![イオンモール木更津でのロボット展示・操縦体験](/assets/images/robots/2024/kisapen/exhibition.webp)
+
+*会場の様子*

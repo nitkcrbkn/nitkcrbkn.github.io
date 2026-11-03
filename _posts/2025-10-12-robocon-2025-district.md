@@ -14,19 +14,17 @@ robots: [2025-soreyuke-kisantaclaus, 2025-octo-pass-gate]
 
 ## Aチーム：全国大会への出場が決定
 
-<figure>
-  <img width="604" height="402" loading="lazy" decoding="async" src="{{ '/assets/images/robots/2025/kisantaclaus/competition.webp' | relative_url }}" alt="Aチーム「それゆけキサンタクロース」">
-  <figcaption>Aチーム「それゆけキサンタクロース」 <a href="https://www.kisarazu.ac.jp/news/2025-%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B3%E9%96%A2%E6%9D%B1%E7%94%B2%E4%BF%A1%E8%B6%8A%E5%9C%B0%E5%8C%BA%E5%A4%A7%E4%BC%9A%E5%8F%82%E5%8A%A0%E5%A0%B1%E5%91%8A%EF%BC%88%E3%83%AD%E3%83%9C%E3%83%83/">写真：木更津高専</a></figcaption>
-</figure>
+![Aチーム「それゆけキサンタクロース」](/assets/images/robots/2025/kisantaclaus/competition.webp)
+
+*Aチーム「それゆけキサンタクロース」 [写真：木更津高専](https://www.kisarazu.ac.jp/news/2025-%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B3%E9%96%A2%E6%9D%B1%E7%94%B2%E4%BF%A1%E8%B6%8A%E5%9C%B0%E5%8C%BA%E5%A4%A7%E4%BC%9A%E5%8F%82%E5%8A%A0%E5%A0%B1%E5%91%8A%EF%BC%88%E3%83%AD%E3%83%9C%E3%83%83/)*
 
 Aチーム「それゆけキサンタクロース」は、練習時間を確保するために機体を早めに完成させる方針で準備を進めてきました。本番では操縦ミスや機械トラブルもありましたが、機体全体の完成度は高く、9年ぶりに決勝トーナメントに進出しました。地区大会で最多得点を記録し、2年連続となる全国大会への推薦をいただきました。
 
 ## Bチーム：安川電機特別賞を受賞
 
-<figure>
-  <img width="1385" height="924" loading="lazy" decoding="async" src="{{ '/assets/images/robots/2025/octo/competition.webp' | relative_url }}" alt="Bチーム「オクト pass gate」">
-  <figcaption>Bチーム「オクト pass gate」 <a href="https://www.kisarazu.ac.jp/news/2025-%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B3%E9%96%A2%E6%9D%B1%E7%94%B2%E4%BF%A1%E8%B6%8A%E5%9C%B0%E5%8C%BA%E5%A4%A7%E4%BC%9A%E5%8F%82%E5%8A%A0%E5%A0%B1%E5%91%8A%EF%BC%88%E3%83%AD%E3%83%9C%E3%83%83/">写真：木更津高専</a></figcaption>
-</figure>
+![Bチーム「オクト pass gate」](/assets/images/robots/2025/octo/competition.webp)
+
+*Bチーム「オクト pass gate」 [写真：木更津高専](https://www.kisarazu.ac.jp/news/2025-%E3%83%AD%E3%83%9C%E3%82%B3%E3%83%B3%E9%96%A2%E6%9D%B1%E7%94%B2%E4%BF%A1%E8%B6%8A%E5%9C%B0%E5%8C%BA%E5%A4%A7%E4%BC%9A%E5%8F%82%E5%8A%A0%E5%A0%B1%E5%91%8A%EF%BC%88%E3%83%AD%E3%83%9C%E3%83%83/)*
 
 Bチーム「オクト pass gate」は、機体を大きく展開して2種類のボックスを同時に狙うアイデアで大会に挑みました。本番では展開機構を十分に生かせない場面もありましたが、装飾や構想、挑戦する姿勢が評価され、株式会社安川電機様より特別賞をいただきました。
 

@@ -41,7 +41,7 @@ body_class: home-page
 </section>
 <section class="section home-robots" aria-labelledby="robots-title">
   <div class="section-heading"><div><h2 id="robots-title">製作したロボット</h2></div><a class="text-link" href="{{ '/robot/' | relative_url }}">歴代のロボット</a></div>
-  <div class="robot-card-grid">{% assign featured_robots = site.robots | sort: 'year' | reverse %}{% for robot in featured_robots limit: 2 %}{% include robot_card.html robot=robot show_year=true %}{% endfor %}</div>
+  <div class="robot-card-grid">{% assign featured_robots = site.robots | where_exp: 'robot', 'robot.published != false' | sort: 'year' | reverse %}{% for robot in featured_robots limit: 2 %}{% include robot_card.html robot=robot show_year=true %}{% endfor %}</div>
 </section>
 {% assign workshop = site.posts | where_exp: 'post', "post.url contains 'aeon-workshop'" | first %}
 {% if workshop %}

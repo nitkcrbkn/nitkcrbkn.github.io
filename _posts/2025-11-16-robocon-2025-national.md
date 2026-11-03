@@ -12,10 +12,9 @@ robots: [2025-soreyuke-kisantaclaus]
 ---
 2025年11月16日、Aチーム「それゆけキサンタクロース」が高専ロボコン2025全国大会に出場しました。
 
-<figure>
-  <img src="{{ '/assets/images/robots/2025/kisantaclaus/build-zenkoku.jpeg' | relative_url }}" width="2262" height="1508" alt="全国大会の競技フィールドでボックスを積み上げる「それゆけキサンタクロース」と学生" decoding="async">
-  <figcaption>高専ロボコン2025 全国大会での「それゆけキサンタクロース」</figcaption>
-</figure>
+![全国大会の競技フィールドでボックスを積み上げる「それゆけキサンタクロース」と学生](/assets/images/robots/2025/kisantaclaus/build-zenkoku.jpeg)
+
+*高専ロボコン2025 全国大会での「それゆけキサンタクロース」*
 
 木更津高専としては昨年に続く2年連続の全国大会出場です。1回戦第8試合で一関高専と対戦し、接戦の末に惜しくも敗れました。思い描いていた動きを出し切れず、悔しさの残る試合でした。
 
