@@ -5,7 +5,7 @@ title_parts:
   - 最強伝説
 year: 2026
 team: Aチーム
-overview: ' "3種類の発射機構を使い分け、様々な目標へ得点を狙うロボットです。"'
+overview: 3種類の発射機構を使い分け、様々な目標へ得点を狙うロボットです。
 permalink: /robot/2026-tanukisa-saikyo-densetsu/
 published: false
 image: /assets/images/robots/2026/tanukisa/release.jpeg
